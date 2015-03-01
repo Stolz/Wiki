@@ -52,6 +52,12 @@ return [
 			'prefix'   => '',
 		],
 
+		'sqlite-memory' => [
+			'driver'   => 'sqlite',
+			'database' => ':memory:',
+			'prefix'   => '',
+		],
+
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', 'localhost'),
@@ -61,7 +67,7 @@ return [
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
-			'strict'    => false,
+			'strict'    => env('DB_STRICT', false),
 		],
 
 		'pgsql' => [

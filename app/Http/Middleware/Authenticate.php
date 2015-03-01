@@ -3,8 +3,8 @@
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class Authenticate {
-
+class Authenticate
+{
 	/**
 	 * The Guard implementation.
 	 *
@@ -40,11 +40,10 @@ class Authenticate {
 			}
 			else
 			{
-				return redirect()->guest('auth/login');
+				return redirect()->guest('login');
 			}
 		}
 
 		return $next($request);
 	}
-
 }

@@ -5,6 +5,15 @@
 
     RewriteEngine On
 
+	#### Remove www from host
+	#RewriteCond %{HTTP_HOST} ^www\.(.+)
+	#RewriteCond %{HTTPS}s/%1 ^(on(s)|offs)/(.+)
+	#RewriteRule ^ http%2://%3%{REQUEST_URI} [L,R=301]
+
+	#### Force httpS on some pages
+	#RewriteCond %{HTTPS} =off
+	#RewriteRule ^(index\.php\/)?(login|logout|auth|api).*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
     # Redirect Trailing Slashes...
     RewriteRule ^(.*)/$ /$1 [L,R=301]
 
@@ -13,3 +22,6 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+#Note: The [L] flag causes mod_rewrite to stop processing the rule set. In most contexts, this means that if the rule matches, no further rules will be processed.
+#Use this flag to indicate that the current rule should be applied immediately without considering further rules.

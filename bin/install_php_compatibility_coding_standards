@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Script to install https://github.com/wimg/PHPCompatibility into current PHP_CodeSniffer composer installation
+
+source "$( cd "$( dirname "$0" )" && pwd )/common" || exit 1
+
+go_to_laravel_dir
+
+cd vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/ || exit_error PHP_CodeSniffer not installed
+
+if [[ -d PHPCompatibility ]]; then
+	cd PHPCompatibility
+	git pull -q
+else
+	git clone http://github.com/wimg/PHPCompatibility.git -q
+fi
+
+# To use it: ./vendor/bin/phpcs --report-width=100 --tab-width=4 -as --standard=PHPCompatibility app/ --runtime-set testVersion <<PHPversion>>" yellow

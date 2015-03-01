@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Script to fix upstream conflics with gettext translations
+
+source "$( cd "$( dirname "$0" )" && pwd )/common" || exit 1
+
+go_to_laravel_dir
+
+git checkout HEAD resources/lang/en_US/LC_MESSAGES/messages.mo resources/lang/en_US/LC_MESSAGES/messages.po resources/lang/en_US/LC_MESSAGES/messages.pot resources/lang/es_ES/LC_MESSAGES/messages.mo resources/lang/es_ES/LC_MESSAGES/messages.pot
+
+git mergetool -y
+
+./bin/delete_old_files

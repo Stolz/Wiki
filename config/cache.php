@@ -52,6 +52,7 @@ return [
 			'servers' => [
 				[
 					'host' => '127.0.0.1', 'port' => 11211, 'weight' => 100
+					//NOTE for using socket instead: ['host' => '/run/memcached/memcached.sock', 'port' => 0, 'weight' => 100],
 				],
 			],
 		],

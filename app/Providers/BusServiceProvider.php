@@ -3,8 +3,8 @@
 use Illuminate\Bus\Dispatcher;
 use Illuminate\Support\ServiceProvider;
 
-class BusServiceProvider extends ServiceProvider {
-
+class BusServiceProvider extends ServiceProvider
+{
 	/**
 	 * Bootstrap any application services.
 	 *
@@ -13,11 +13,8 @@ class BusServiceProvider extends ServiceProvider {
 	 */
 	public function boot(Dispatcher $dispatcher)
 	{
-		$dispatcher->mapUsing(function($command)
-		{
-			return Dispatcher::simpleMapping(
-				$command, 'App\Commands', 'App\Handlers\Commands'
-			);
+		$dispatcher->mapUsing(function($command) {
+			return Dispatcher::simpleMapping($command, 'App\Commands', 'App\Handlers\Commands');
 		});
 	}
 
@@ -30,5 +27,4 @@ class BusServiceProvider extends ServiceProvider {
 	{
 		//
 	}
-
 }

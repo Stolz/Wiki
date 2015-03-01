@@ -1,2 +1,5 @@
+# More info: www.robotstxt.org www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+
+# Allow all hosts by default
 User-agent: *
 Disallow:

@@ -13,7 +13,18 @@ return [
 	|
 	*/
 
-	'debug' => env('APP_DEBUG'),
+	'debug' => env('APP_DEBUG', false),
+
+	/*
+	|--------------------------------------------------------------------------
+	| Application name
+	|--------------------------------------------------------------------------
+	|
+	| This will be used in several places such emails and page headers.
+	|
+	*/
+
+	'name' => 'Wiki',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +37,7 @@ return [
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://wiki',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +89,7 @@ return [
 	|
 	*/
 
-	'key' => env('APP_KEY', 'SomeRandomString'),
+	'key' => env('APP_KEY', 'SomeRandomString'), //TODO
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -115,7 +126,7 @@ return [
 		 */
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
-		'Illuminate\Bus\BusServiceProvider',
+		//'Illuminate\Bus\BusServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
 		'Illuminate\Routing\ControllerServiceProvider',
@@ -125,11 +136,11 @@ return [
 		'Illuminate\Filesystem\FilesystemServiceProvider',
 		'Illuminate\Foundation\Providers\FoundationServiceProvider',
 		'Illuminate\Hashing\HashServiceProvider',
-		'Illuminate\Mail\MailServiceProvider',
+		//'Illuminate\Mail\MailServiceProvider',
 		'Illuminate\Pagination\PaginationServiceProvider',
 		'Illuminate\Pipeline\PipelineServiceProvider',
-		'Illuminate\Queue\QueueServiceProvider',
-		'Illuminate\Redis\RedisServiceProvider',
+		//'Illuminate\Queue\QueueServiceProvider',
+		//'Illuminate\Redis\RedisServiceProvider',
 		'Illuminate\Auth\Passwords\PasswordResetServiceProvider',
 		'Illuminate\Session\SessionServiceProvider',
 		'Illuminate\Translation\TranslationServiceProvider',
@@ -137,14 +148,33 @@ return [
 		'Illuminate\View\ViewServiceProvider',
 
 		/*
+		 * Other Laravel Service Providers...
+		 */
+		'Laravel\Socialite\SocialiteServiceProvider',
+
+		/*
 		 * Application Service Providers...
 		 */
+		'App\Providers\LanguageServiceProvider',
 		'App\Providers\AppServiceProvider',
-		'App\Providers\BusServiceProvider',
+		//'App\Providers\BusServiceProvider',
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
+		'App\Providers\ViewComposerServiceProvider',
 
+		/*
+		 * Package Service Providers...
+		 */
+		'App\Providers\BaumServiceProvider', //TODO workaround until 'Baum\BaumServiceProvider' supports Laravel 5
+		'Stolz\Assets\Laravel\ServiceProvider',
+		'Stolz\LaravelFormBuilder\ServiceProvider',
+
+		/*
+		 * Environment Specific Service Providers...
+		 */
+		'Barryvdh\Debugbar\ServiceProvider', //TODO Remove on production environment
+		'Stolz\HtmlTidy\ServiceProvider',    //TODO Remove on production environment
 	],
 
 	/*
@@ -164,7 +194,7 @@ return [
 		'Artisan'   => 'Illuminate\Support\Facades\Artisan',
 		'Auth'      => 'Illuminate\Support\Facades\Auth',
 		'Blade'     => 'Illuminate\Support\Facades\Blade',
-		'Bus'       => 'Illuminate\Support\Facades\Bus',
+		//'Bus'       => 'Illuminate\Support\Facades\Bus',
 		'Cache'     => 'Illuminate\Support\Facades\Cache',
 		'Config'    => 'Illuminate\Support\Facades\Config',
 		'Cookie'    => 'Illuminate\Support\Facades\Cookie',
@@ -175,14 +205,14 @@ return [
 		'File'      => 'Illuminate\Support\Facades\File',
 		'Hash'      => 'Illuminate\Support\Facades\Hash',
 		'Input'     => 'Illuminate\Support\Facades\Input',
-		'Inspiring' => 'Illuminate\Foundation\Inspiring',
-		'Lang'      => 'Illuminate\Support\Facades\Lang',
+		//'Inspiring' => 'Illuminate\Foundation\Inspiring',
+		//'Lang'      => 'Illuminate\Support\Facades\Lang',
 		'Log'       => 'Illuminate\Support\Facades\Log',
 		'Mail'      => 'Illuminate\Support\Facades\Mail',
 		'Password'  => 'Illuminate\Support\Facades\Password',
 		'Queue'     => 'Illuminate\Support\Facades\Queue',
 		'Redirect'  => 'Illuminate\Support\Facades\Redirect',
-		'Redis'     => 'Illuminate\Support\Facades\Redis',
+		//'Redis'     => 'Illuminate\Support\Facades\Redis',
 		'Request'   => 'Illuminate\Support\Facades\Request',
 		'Response'  => 'Illuminate\Support\Facades\Response',
 		'Route'     => 'Illuminate\Support\Facades\Route',
@@ -192,6 +222,7 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+		'Socialite' => 'Laravel\Socialite\Facades\Socialite',
 
 	],
 

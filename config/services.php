@@ -14,24 +14,22 @@ return [
 	|
 	*/
 
-	'mailgun' => [
-		'domain' => '',
-		'secret' => '',
+	'facebook' => [
+		'client_id'     => env('FACEBOOK_OAUTH_CLIENT_ID'),
+		'client_secret' => env('FACEBOOK_OAUTH_CLIENT_SECRET'),
+		'scopes'        => ['email'],
 	],
 
-	'mandrill' => [
-		'secret' => '',
+	'github' => [
+		'client_id'     => env('GITHUB_OAUTH_CLIENT_ID'),
+		'client_secret' => env('GITHUB_OAUTH_CLIENT_SECRET'),
+		'scopes'        => ['user:email'],
 	],
 
-	'ses' => [
-		'key' => '',
-		'secret' => '',
-		'region' => 'us-east-1',
-	],
-
-	'stripe' => [
-		'model'  => 'User',
-		'secret' => '',
+	'google' => [
+		'client_id'     => env('GOOGLE_OAUTH_CLIENT_ID'),
+		'client_secret' => env('GOOGLE_OAUTH_CLIENT_SECRET'),
+		'scopes'        => ['profile', 'email'],
 	],
 
 ];

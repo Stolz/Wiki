@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# Fix file and directory permissions for webserver
+
+# Default user and group if none is provided as argument
+USER=${1:-$USER}
+GROUP=${2:-nginx}
+
+source "$( cd "$( dirname "$0" )" && pwd )/common" || exit 1
+
+go_to_laravel_dir
+
+color "Changing permissions for `pwd`"
+color "Owner will be set to $USER:$GROUP. Use $0 [user] [group] to customize this" "yellow"
+
+
+# Wrapper command
+if [[ $EUID -ne 0 && -x /usr/bin/sudo ]]; then
+	SUDO='sudo'
+else
+	SUDO=''
+fi
+
+# Owner
+$SUDO chown $USER:$GROUP . -R
+
+# Default safe permissions
+$SUDO find . -type d -exec chmod 770 {} \;
+$SUDO find . -type f -exec chmod 660 {} \;
+
+# Exec permission for scripts
+$SUDO chmod 760 artisan bin/* vendor/bin/*
+
+exit 0
+

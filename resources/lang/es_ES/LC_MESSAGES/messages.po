@@ -1,0 +1,430 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-26 13:21+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "%s successfully created"
+msgstr "%s creado con éxito"
+
+#, php-format
+msgid "%s successfully deleted"
+msgstr "%s borrado con éxito"
+
+#, php-format
+msgid "%s successfully saved"
+msgstr "%s guardado con éxito"
+
+#, php-format
+msgid "%s successfully updated"
+msgstr "%s actualizado con éxito"
+
+msgid "Actions"
+msgstr "Acciones"
+
+#, php-format
+msgid "Add %s"
+msgstr "Añadir %d"
+
+msgid "Admin"
+msgstr "Administrar"
+
+msgid "Are you sure?"
+msgstr "¿Estás seguro?"
+
+msgid "Avatar"
+msgstr "Avatar"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Categories"
+msgstr "Categorías"
+
+msgid "Category"
+msgstr "Categoría"
+
+msgid "Code"
+msgstr "Código"
+
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgid "Create"
+msgstr "Crear"
+
+msgid "Default"
+msgstr "Predeterminado"
+
+msgid "Delete"
+msgstr "Borrar"
+
+#, php-format
+msgid "Delete '%s'"
+msgstr "Borrar '%s'"
+
+msgid "Details"
+msgstr "Detalles"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Go back"
+msgstr "Volver atrás"
+
+msgid "Home"
+msgstr "Inicio"
+
+msgid "If you think this may be an error please contact the site admin"
+msgstr "Si crees que se trata de un error por favor contacta con el administrador de la web"
+
+msgid "Index"
+msgstr "Listado"
+
+msgid "Is admin"
+msgstr "Es administrador"
+
+msgid "Is default"
+msgstr "Es el por defecto"
+
+msgid "It looks like this was the result of either"
+msgstr "Esto suele ser resultado de"
+
+msgid "Language"
+msgstr "Idioma"
+
+#, php-format
+msgid "Language changed to %s"
+msgstr "Idioma cambiado a %s"
+
+msgid "Languages"
+msgstr "Idiomas"
+
+msgid "Locale"
+msgstr "Regional"
+
+#, php-format
+msgid "Logged in as %s"
+msgstr "Conectado como %s"
+
+msgid "Logged out"
+msgstr "Desconectado"
+
+msgid "Login"
+msgstr "Acceder"
+
+msgid "Login count"
+msgstr "Número de accesos"
+
+msgid "Login or register with one click using one of these providers"
+msgstr "Accede o regístrate con un solo click con alguno de estos proveedores"
+
+msgid "Login or register with one of these providers"
+msgstr "Accede o regístrate con alguno de estos proveedores"
+
+msgid "Logout"
+msgstr "Desconectar"
+
+msgid "Menu"
+msgstr "Menú"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Native name"
+msgstr "Nombre nativo"
+
+msgid "Next"
+msgstr "Siguiente"
+
+msgid "Nickname"
+msgstr "Apodo"
+
+msgid "No"
+msgstr "No"
+
+msgid "One click login"
+msgstr "Acceso con un click"
+
+msgid "Parent"
+msgstr "Padre"
+
+msgid "Parent category"
+msgstr "Categoría padre"
+
+msgid "Passwords must be at least six characters and match the confirmation."
+msgstr "La contraseña de tener al menos seis caracteres y concidir con la confirmación."
+
+#, php-format
+msgid "Perhaps you would like to go to our %shome page%s?"
+msgstr "Tal vez quieras visitar nuestra %spágina incial%s"
+
+msgid "Please visit us again in a few minutes"
+msgstr "Por favor vuelve a intentar de nuevo un poco más tarde"
+
+msgid "Previous"
+msgstr "Anterior"
+
+msgid "Provider"
+msgstr "Proveedor"
+
+msgid "Providers"
+msgstr "Proveedores"
+
+msgid "Remote ID"
+msgstr "ID remoto"
+
+msgid "Remote id"
+msgstr "ID remoto"
+
+msgid "Return"
+msgstr "Volver"
+
+msgid "Root"
+msgstr "Raíz"
+
+msgid "Site down for maintenance"
+msgstr "Web parada por mantenimiento"
+
+msgid "Slug"
+msgstr "Nombre para URL"
+
+msgid "Some errors occurred"
+msgstr "Se han producido errores"
+
+msgid "Something went wrong"
+msgstr "Algo fue mal"
+
+msgid "Something went wrong while we were processing your request"
+msgstr "Algo ha ido mal al procesar tu petición"
+
+msgid "Sorry, our site is currently undergoing scheduled maintenance"
+msgstr "Lo sentimos, estamos realizando un mantenimiento programado de la web"
+
+msgid "The :attribute and :other must be different."
+msgstr "Los campos :attribute y :other deben ser diferentes."
+
+msgid "The :attribute and :other must match."
+msgstr "Los campos :attribute y :other deben coincidir."
+
+msgid "The :attribute confirmation does not match."
+msgstr ":attribute no conincide con el valor de confirmación."
+
+msgid "The :attribute does not match the format :format."
+msgstr ":attribute no cumple el formato :format."
+
+msgid "The :attribute field is required when :other is :value."
+msgstr ":attribute es obligatorio cuando :other es :value."
+
+msgid "The :attribute field is required when :values is not present."
+msgstr ":attribute es obligatorio cuando no se indica :values."
+
+msgid "The :attribute field is required when :values is present."
+msgstr ":attribute es obligatorio cuando se indica :values."
+
+msgid "The :attribute field is required when none of :values are present."
+msgstr ":attribute es obligatorio cuando no se indica ninguno de los valores :values."
+
+msgid "The :attribute field is required."
+msgstr "El campo :attribute es obligatorio."
+
+msgid "The :attribute field must be true or false."
+msgstr ":attribute debe ser cierto o falso."
+
+msgid "The :attribute format is invalid."
+msgstr "El formato de :attribute no es válido."
+
+msgid "The :attribute has already been taken."
+msgstr "El valor de :attribute ya está en uso."
+
+msgid "The :attribute is not a valid URL."
+msgstr ":attribute no es una URL válida."
+
+msgid "The :attribute is not a valid date."
+msgstr ":attribute no es una fecha válida."
+
+msgid "The :attribute may not be greater than :max characters."
+msgstr ":attribute no puede tener más de :max caracteres."
+
+msgid "The :attribute may not be greater than :max kilobytes."
+msgstr ":attribute no puede ser mayor de :max kilobytes."
+
+msgid "The :attribute may not be greater than :max."
+msgstr ":attribute no puede ser mayor que :max."
+
+msgid "The :attribute may not have more than :max items."
+msgstr ":attribute no puede tener más de :max ítems."
+
+msgid "The :attribute may only contain letters and numbers."
+msgstr ":attribute solo puede contener letras y números."
+
+msgid "The :attribute may only contain letters, numbers, and dashes."
+msgstr ":attribute solo puede contener letras, números y guiones."
+
+msgid "The :attribute may only contain letters."
+msgstr ":attribute solo puede contener letras."
+
+msgid "The :attribute must be :digits digits."
+msgstr ":attribute debe de tener :digits dígitos."
+
+msgid "The :attribute must be :size characters."
+msgstr ":attribute debe tener :size caracteres."
+
+msgid "The :attribute must be :size kilobytes."
+msgstr ":attribute debe ser de :size kilobytes."
+
+msgid "The :attribute must be :size."
+msgstr ":attribute debe ser de tamaño :size."
+
+msgid "The :attribute must be a date after :date."
+msgstr ":attribute debe ser una fecha posterior a :date."
+
+msgid "The :attribute must be a date before :date."
+msgstr ":attribute debe ser una fecha anterior a :date."
+
+msgid "The :attribute must be a file of type: :values."
+msgstr ":attribute debe ser un fichero de tipo :values."
+
+msgid "The :attribute must be a number."
+msgstr ":attribute debe ser un número."
+
+msgid "The :attribute must be a valid IP address."
+msgstr ":attribute debe ser una dirección IP válida."
+
+msgid "The :attribute must be a valid email address."
+msgstr ":attribute debe ser una dirección de email válida."
+
+msgid "The :attribute must be a valid zone."
+msgstr "El campo :attribute debe ser una zona horaria válida."
+
+msgid "The :attribute must be accepted."
+msgstr "El campo :attribute debe ser aceptado"
+
+msgid "The :attribute must be an array."
+msgstr ":attribute debe ser un array."
+
+msgid "The :attribute must be an image."
+msgstr ":attribute debe ser una imagen."
+
+msgid "The :attribute must be an integer."
+msgstr ":attribute debe ser un número entero."
+
+msgid "The :attribute must be at least :min characters."
+msgstr ":attribute debe tener al menos :min caracteres."
+
+msgid "The :attribute must be at least :min kilobytes."
+msgstr ":attribute debe de ser de al menos :min kilobytes."
+
+msgid "The :attribute must be at least :min."
+msgstr ":attribute debe ser al menos :min."
+
+msgid "The :attribute must be between :min and :max characters."
+msgstr ":attribute debe tener entre :min y :max caracteres."
+
+msgid "The :attribute must be between :min and :max digits."
+msgstr ":attribute debe tener entre :min y :max dígitos."
+
+msgid "The :attribute must be between :min and :max kilobytes."
+msgstr ":attribute debe ocupar entre :min y :max kilobytes."
+
+msgid "The :attribute must be between :min and :max."
+msgstr ":attribute debe estar entre :min y :max."
+
+msgid "The :attribute must contain :size items."
+msgstr ":attribute debe contener :size ítems."
+
+msgid "The :attribute must have at least :min items."
+msgstr ":attribute debe tener al menos :min ítems."
+
+msgid "The :attribute must have between :min and :max items."
+msgstr ":attribute debe tener entre :min y :max ítems."
+
+msgid "The selected :attribute is invalid."
+msgstr "El valor seleccionado para :attribute no es válido."
+
+#, php-format
+msgid "There are problems with data provided by %s"
+msgstr "Hay problemas con los datos proporcionados por %s"
+
+msgid "This password reset token is invalid."
+msgstr "El token de restablecimiento de contraseña no es válido."
+
+msgid "Tree"
+msgstr "Árbol"
+
+msgid "Unable to create resource"
+msgstr "No se ha podido crear el recurso"
+
+msgid "Unable to delete resource"
+msgstr "No se ha podido borrar el recurso"
+
+msgid "Unable to save resource"
+msgstr "No se ha podido guardar el recurso"
+
+msgid "Unable to update resource"
+msgstr "No se ha podido actualizar el recurso"
+
+msgid "User"
+msgstr "Usuario"
+
+msgid "Users"
+msgstr "Usuarios"
+
+msgid "View all on this category"
+msgstr "Ver todos en esta categoría"
+
+msgid "We can't find a user with that e-mail address."
+msgstr "No hemos podido encontrar ningún usuario con esa dirección de e-mail."
+
+msgid "We have e-mailed your password reset link!"
+msgstr "Te hemos enviado por e-mail el enlace para restablecer contraseña"
+
+msgid "We're really sorry about this, and will work hard to get this resolved as soon as possible"
+msgstr "Lamentamos mucho las molestias, estamos trabajando para resolverlo lo antes posible"
+
+msgid "We're really sorry but we couldn't find the page you requested on our servers"
+msgstr "Lo sentimos mucho pero no hemos podido encontrar la página que has solicitado"
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid "Your account has been disabled"
+msgstr "Tu cuenta ha sido desactivada"
+
+msgid "Your password has been reset!"
+msgstr "Tu contraseña ha sido restablecida"
+
+msgid "Your user is not authorized to access this section"
+msgstr "Tu usuario no está autorizado a acceder a esta sección"
+
+msgid "a mistyped address"
+msgstr "una dirección mal escrita"
+
+msgid "add"
+msgstr "añadir"
+
+msgid "an out-of-date link"
+msgstr "un enlace antiguo"
+
+msgid "edit"
+msgstr "editar"

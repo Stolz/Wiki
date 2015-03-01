@@ -1,0 +1,433 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-26 13:08+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "%s successfully created"
+msgstr ""
+
+#, php-format
+msgid "%s successfully deleted"
+msgstr ""
+
+#, php-format
+msgid "%s successfully saved"
+msgstr ""
+
+#, php-format
+msgid "%s successfully updated"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+msgid "Admin"
+msgstr ""
+
+msgid "Are you sure?"
+msgstr ""
+
+msgid "Avatar"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Category"
+msgstr ""
+
+msgid "Code"
+msgstr ""
+
+msgid "Confirm"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+#, php-format
+msgid "Delete '%s'"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "E-mail"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Go back"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "If you think this may be an error please contact the site admin"
+msgstr ""
+
+msgid "Index"
+msgstr ""
+
+msgid "Is admin"
+msgstr ""
+
+msgid "Is default"
+msgstr ""
+
+msgid "It looks like this was the result of either"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+#, php-format
+msgid "Language changed to %s"
+msgstr ""
+
+msgid "Languages"
+msgstr ""
+
+msgid "Locale"
+msgstr ""
+
+#, php-format
+msgid "Logged in as %s"
+msgstr ""
+
+msgid "Logged out"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Login count"
+msgstr ""
+
+msgid "Login or register with one click using one of these providers"
+msgstr ""
+
+msgid "Login or register with one of these providers"
+msgstr ""
+
+msgid "Logout"
+msgstr ""
+
+msgid "Menu"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Native name"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Nickname"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "One click login"
+msgstr ""
+
+msgid "Parent category"
+msgstr ""
+
+msgid "Parent_id"
+msgstr ""
+
+msgid "Passwords must be at least six characters and match the confirmation."
+msgstr ""
+
+#, php-format
+msgid "Perhaps you would like to go to our %shome page%s?"
+msgstr ""
+
+msgid "Please visit us again in a few minutes"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Provider"
+msgstr ""
+
+msgid "Providers"
+msgstr ""
+
+msgid "Remote id"
+msgstr ""
+
+msgid "Return"
+msgstr ""
+
+msgid "Root"
+msgstr ""
+
+msgid "Site down for maintenance"
+msgstr ""
+
+msgid "Slug"
+msgstr ""
+
+msgid "Some errors occurred"
+msgstr ""
+
+msgid "Something went wrong"
+msgstr ""
+
+msgid "Something went wrong while we were processing your request"
+msgstr ""
+
+msgid "Sorry, our site is currently undergoing scheduled maintenance"
+msgstr ""
+
+msgid "The :attribute and :other must be different."
+msgstr ""
+
+msgid "The :attribute and :other must match."
+msgstr ""
+
+msgid "The :attribute confirmation does not match."
+msgstr ""
+
+msgid "The :attribute does not match the format :format."
+msgstr ""
+
+msgid "The :attribute field is required when :other is :value."
+msgstr ""
+
+msgid "The :attribute field is required when :values is not present."
+msgstr ""
+
+msgid "The :attribute field is required when :values is present."
+msgstr ""
+
+msgid "The :attribute field is required when none of :values are present."
+msgstr ""
+
+msgid "The :attribute field is required."
+msgstr ""
+
+msgid "The :attribute field must be true or false."
+msgstr ""
+
+msgid "The :attribute format is invalid."
+msgstr ""
+
+msgid "The :attribute has already been taken."
+msgstr ""
+
+msgid "The :attribute is not a valid URL."
+msgstr ""
+
+msgid "The :attribute is not a valid date."
+msgstr ""
+
+msgid "The :attribute may not be greater than :max characters."
+msgstr ""
+
+msgid "The :attribute may not be greater than :max kilobytes."
+msgstr ""
+
+msgid "The :attribute may not be greater than :max."
+msgstr ""
+
+msgid "The :attribute may not have more than :max items."
+msgstr ""
+
+msgid "The :attribute may only contain letters and numbers."
+msgstr ""
+
+msgid "The :attribute may only contain letters, numbers, and dashes."
+msgstr ""
+
+msgid "The :attribute may only contain letters."
+msgstr ""
+
+msgid "The :attribute must be :digits digits."
+msgstr ""
+
+msgid "The :attribute must be :size characters."
+msgstr ""
+
+msgid "The :attribute must be :size kilobytes."
+msgstr ""
+
+msgid "The :attribute must be :size."
+msgstr ""
+
+msgid "The :attribute must be a date after :date."
+msgstr ""
+
+msgid "The :attribute must be a date before :date."
+msgstr ""
+
+msgid "The :attribute must be a file of type: :values."
+msgstr ""
+
+msgid "The :attribute must be a number."
+msgstr ""
+
+msgid "The :attribute must be a valid IP address."
+msgstr ""
+
+msgid "The :attribute must be a valid email address."
+msgstr ""
+
+msgid "The :attribute must be a valid zone."
+msgstr ""
+
+msgid "The :attribute must be accepted."
+msgstr ""
+
+msgid "The :attribute must be an array."
+msgstr ""
+
+msgid "The :attribute must be an image."
+msgstr ""
+
+msgid "The :attribute must be an integer."
+msgstr ""
+
+msgid "The :attribute must be at least :min characters."
+msgstr ""
+
+msgid "The :attribute must be at least :min kilobytes."
+msgstr ""
+
+msgid "The :attribute must be at least :min."
+msgstr ""
+
+msgid "The :attribute must be between :min and :max characters."
+msgstr ""
+
+msgid "The :attribute must be between :min and :max digits."
+msgstr ""
+
+msgid "The :attribute must be between :min and :max kilobytes."
+msgstr ""
+
+msgid "The :attribute must be between :min and :max."
+msgstr ""
+
+msgid "The :attribute must contain :size items."
+msgstr ""
+
+msgid "The :attribute must have at least :min items."
+msgstr ""
+
+msgid "The :attribute must have between :min and :max items."
+msgstr ""
+
+msgid "The selected :attribute is invalid."
+msgstr ""
+
+#, php-format
+msgid "There are problems with data provided by %s"
+msgstr ""
+
+msgid "This password reset token is invalid."
+msgstr ""
+
+msgid "Tree"
+msgstr ""
+
+msgid "Unable to create resource"
+msgstr ""
+
+msgid "Unable to delete resource"
+msgstr ""
+
+msgid "Unable to save resource"
+msgstr ""
+
+msgid "Unable to update resource"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "User id"
+msgstr ""
+
+msgid "Users"
+msgstr ""
+
+msgid "View all on this category"
+msgstr ""
+
+msgid "We can't find a user with that e-mail address."
+msgstr ""
+
+msgid "We have e-mailed your password reset link!"
+msgstr ""
+
+msgid "We're really sorry about this, and will work hard to get this resolved as soon as possible"
+msgstr ""
+
+msgid "We're really sorry but we couldn't find the page you requested on our servers"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "Your account has been disabled"
+msgstr ""
+
+msgid "Your password has been reset!"
+msgstr ""
+
+msgid "Your user is not authorized to access this section"
+msgstr ""
+
+msgid "a mistyped address"
+msgstr ""
+
+msgid "add"
+msgstr ""
+
+msgid "an out-of-date link"
+msgstr ""
+
+msgid "edit"
+msgstr ""

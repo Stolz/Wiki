@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Delete old files
+
+source "$( cd "$( dirname "$0" )" && pwd )/common" || exit 1
+
+go_to_laravel_dir
+
+color "Deleting obsolete files in `pwd`" red
+color "Press ENTER to continue or CONTROL+C to cancel" yellow
+read
+
+# Editor backps
+find . -type f \( -name ".*~" -o -name "*~" \) -exec rm {} \;
+
+# Git conflicts remains
+for ext in php mo po json; do
+	find . -type f \( -name "*.$ext.orig" -o -name "*.$ext.BACKUP.*.$ext" -o -name "*.$ext.BASE.*.$ext" -o  -name "*.$ext.LOCAL.*.$ext" -o -name "*.$ext.REMOTE.*.$ext" \) -exec rm -i {} \;
+done
+
+exit 0

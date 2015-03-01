@@ -29,9 +29,9 @@ return [
 	|
 	*/
 
-	'lifetime' => 120,
+	'lifetime' => 60,
 
-	'expire_on_close' => false,
+	'expire_on_close' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -44,7 +44,7 @@ return [
 	|
 	*/
 
-	'encrypt' => false,
+	'encrypt' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -109,7 +109,7 @@ return [
 	|
 	*/
 
-	'cookie' => 'laravel_session',
+	'cookie' => 'stolz_wiki',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -135,7 +135,7 @@ return [
 	|
 	*/
 
-	'domain' => null,
+	'domain' => null, //TODO set to .example.com to keep the session between subdomains
 
 	/*
 	|--------------------------------------------------------------------------
