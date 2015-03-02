@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-26 13:21+0100\n"
+"POT-Creation-Date: 2015-03-02 11:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,13 +36,6 @@ msgstr "%s actualizado con éxito"
 msgid "Actions"
 msgstr "Acciones"
 
-#, php-format
-msgid "Add %s"
-msgstr "Añadir %d"
-
-msgid "Admin"
-msgstr "Administrar"
-
 msgid "Are you sure?"
 msgstr "¿Estás seguro?"
 
@@ -58,14 +51,26 @@ msgstr "Categorías"
 msgid "Category"
 msgstr "Categoría"
 
+msgid "Change language"
+msgstr "Cambiar idioma"
+
 msgid "Code"
 msgstr "Código"
 
 msgid "Confirm"
 msgstr "Confirmar"
 
+msgid "Content"
+msgstr "Contenido"
+
 msgid "Create"
 msgstr "Crear"
+
+msgid "Create page"
+msgstr "Crear página"
+
+msgid "Create subcategory"
+msgstr "Crear subcategoría"
 
 msgid "Default"
 msgstr "Predeterminado"
@@ -139,11 +144,14 @@ msgstr "Número de accesos"
 msgid "Login or register with one click using one of these providers"
 msgstr "Accede o regístrate con un solo click con alguno de estos proveedores"
 
-msgid "Login or register with one of these providers"
-msgstr "Accede o regístrate con alguno de estos proveedores"
-
 msgid "Logout"
 msgstr "Desconectar"
+
+msgid "Make another language the default one instead."
+msgstr "En su lugar, haz que otro idioma sea el predeterminado"
+
+msgid "Make another role the default one instead."
+msgstr "En su lugar, haz que otro rol sea el predeterminado"
 
 msgid "Menu"
 msgstr "Menú"
@@ -163,14 +171,17 @@ msgstr "Apodo"
 msgid "No"
 msgstr "No"
 
-msgid "One click login"
-msgstr "Acceso con un click"
+msgid "No results found"
+msgstr "No se han encontrado resultados"
+
+msgid "Page"
+msgstr "Página"
+
+msgid "Pages"
+msgstr "Páginas"
 
 msgid "Parent"
 msgstr "Padre"
-
-msgid "Parent category"
-msgstr "Categoría padre"
 
 msgid "Passwords must be at least six characters and match the confirmation."
 msgstr "La contraseña de tener al menos seis caracteres y concidir con la confirmación."
@@ -178,6 +189,12 @@ msgstr "La contraseña de tener al menos seis caracteres y concidir con la confi
 #, php-format
 msgid "Perhaps you would like to go to our %shome page%s?"
 msgstr "Tal vez quieras visitar nuestra %spágina incial%s"
+
+msgid "Please login to see available sections"
+msgstr "Por favor identifícate para ver las secciones"
+
+msgid "Please move those pages to another category first"
+msgstr "Por favor primero mueve esas páginas a otra categoría"
 
 msgid "Please visit us again in a few minutes"
 msgstr "Por favor vuelve a intentar de nuevo un poco más tarde"
@@ -200,8 +217,17 @@ msgstr "ID remoto"
 msgid "Return"
 msgstr "Volver"
 
+msgid "Role"
+msgstr "Rol"
+
+msgid "Roles"
+msgstr "Roles"
+
 msgid "Root"
 msgstr "Raíz"
+
+msgid "Sections"
+msgstr "Secciones"
 
 msgid "Site down for maintenance"
 msgstr "Web parada por mantenimiento"
@@ -220,6 +246,9 @@ msgstr "Algo ha ido mal al procesar tu petición"
 
 msgid "Sorry, our site is currently undergoing scheduled maintenance"
 msgstr "Lo sentimos, estamos realizando un mantenimiento programado de la web"
+
+msgid "Subcategories"
+msgstr "Subcategorías"
 
 msgid "The :attribute and :other must be different."
 msgstr "Los campos :attribute y :other deben ser diferentes."
@@ -359,6 +388,12 @@ msgstr ":attribute debe tener al menos :min ítems."
 msgid "The :attribute must have between :min and :max items."
 msgstr ":attribute debe tener entre :min y :max ítems."
 
+msgid "The category cannot be deleted because it has directly assigned pages"
+msgstr "La categoría no puede ser borrada porque tiene páginas directamente asignadas a ella"
+
+msgid "The defaulf status cannot be removed"
+msgstr "El estado predeterminado no puede ser quitado"
+
 msgid "The selected :attribute is invalid."
 msgstr "El valor seleccionado para :attribute no es válido."
 
@@ -366,23 +401,32 @@ msgstr "El valor seleccionado para :attribute no es válido."
 msgid "There are problems with data provided by %s"
 msgstr "Hay problemas con los datos proporcionados por %s"
 
+msgid "This category has no pages yet"
+msgstr "Esta categoría todavía no tiene páginas"
+
+msgid "This category has no subcategories"
+msgstr "Esta categoría todavía no tiene subcategorías"
+
 msgid "This password reset token is invalid."
 msgstr "El token de restablecimiento de contraseña no es válido."
 
-msgid "Tree"
-msgstr "Árbol"
-
-msgid "Unable to create resource"
-msgstr "No se ha podido crear el recurso"
+#, php-format
+msgid "Unable to create %s"
+msgstr "No se ha podido crear %s"
 
 msgid "Unable to delete resource"
 msgstr "No se ha podido borrar el recurso"
 
-msgid "Unable to save resource"
-msgstr "No se ha podido guardar el recurso"
+#, php-format
+msgid "Unable to save %s"
+msgstr "No se ha podido guardar %s"
 
-msgid "Unable to update resource"
-msgstr "No se ha podido actualizar el recurso"
+#, php-format
+msgid "Unable to update %s"
+msgstr "No se ha podido actualizar %s"
+
+msgid "Unavailable provider"
+msgstr "Proveedor no disponible"
 
 msgid "User"
 msgstr "Usuario"
@@ -390,8 +434,11 @@ msgstr "Usuario"
 msgid "Users"
 msgstr "Usuarios"
 
-msgid "View all on this category"
-msgstr "Ver todos en esta categoría"
+msgid "Version"
+msgstr "Versión"
+
+msgid "Versions"
+msgstr "Versiones"
 
 msgid "We can't find a user with that e-mail address."
 msgstr "No hemos podido encontrar ningún usuario con esa dirección de e-mail."
@@ -420,11 +467,11 @@ msgstr "Tu usuario no está autorizado a acceder a esta sección"
 msgid "a mistyped address"
 msgstr "una dirección mal escrita"
 
-msgid "add"
-msgstr "añadir"
-
 msgid "an out-of-date link"
 msgstr "un enlace antiguo"
+
+msgid "create"
+msgstr "crear"
 
 msgid "edit"
 msgstr "editar"

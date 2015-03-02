@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-26 13:21+0100\n"
+"POT-Creation-Date: 2015-03-02 11:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,13 +36,6 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#, php-format
-msgid "Add %s"
-msgstr ""
-
-msgid "Admin"
-msgstr ""
-
 msgid "Are you sure?"
 msgstr ""
 
@@ -58,13 +51,25 @@ msgstr ""
 msgid "Category"
 msgstr ""
 
+msgid "Change language"
+msgstr ""
+
 msgid "Code"
 msgstr ""
 
 msgid "Confirm"
 msgstr ""
 
+msgid "Content"
+msgstr ""
+
 msgid "Create"
+msgstr ""
+
+msgid "Create page"
+msgstr ""
+
+msgid "Create subcategory"
 msgstr ""
 
 msgid "Default"
@@ -139,10 +144,13 @@ msgstr ""
 msgid "Login or register with one click using one of these providers"
 msgstr ""
 
-msgid "Login or register with one of these providers"
+msgid "Logout"
 msgstr ""
 
-msgid "Logout"
+msgid "Make another language the default one instead."
+msgstr ""
+
+msgid "Make another role the default one instead."
 msgstr ""
 
 msgid "Menu"
@@ -163,13 +171,16 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-msgid "One click login"
+msgid "No results found"
+msgstr ""
+
+msgid "Page"
+msgstr ""
+
+msgid "Pages"
 msgstr ""
 
 msgid "Parent"
-msgstr ""
-
-msgid "Parent category"
 msgstr ""
 
 msgid "Passwords must be at least six characters and match the confirmation."
@@ -177,6 +188,12 @@ msgstr ""
 
 #, php-format
 msgid "Perhaps you would like to go to our %shome page%s?"
+msgstr ""
+
+msgid "Please login to see available sections"
+msgstr ""
+
+msgid "Please move those pages to another category first"
 msgstr ""
 
 msgid "Please visit us again in a few minutes"
@@ -200,7 +217,16 @@ msgstr ""
 msgid "Return"
 msgstr ""
 
+msgid "Role"
+msgstr ""
+
+msgid "Roles"
+msgstr ""
+
 msgid "Root"
+msgstr ""
+
+msgid "Sections"
 msgstr ""
 
 msgid "Site down for maintenance"
@@ -219,6 +245,9 @@ msgid "Something went wrong while we were processing your request"
 msgstr ""
 
 msgid "Sorry, our site is currently undergoing scheduled maintenance"
+msgstr ""
+
+msgid "Subcategories"
 msgstr ""
 
 msgid "The :attribute and :other must be different."
@@ -359,6 +388,12 @@ msgstr ""
 msgid "The :attribute must have between :min and :max items."
 msgstr ""
 
+msgid "The category cannot be deleted because it has directly assigned pages"
+msgstr ""
+
+msgid "The defaulf status cannot be removed"
+msgstr ""
+
 msgid "The selected :attribute is invalid."
 msgstr ""
 
@@ -366,22 +401,31 @@ msgstr ""
 msgid "There are problems with data provided by %s"
 msgstr ""
 
+msgid "This category has no pages yet"
+msgstr ""
+
+msgid "This category has no subcategories"
+msgstr ""
+
 msgid "This password reset token is invalid."
 msgstr ""
 
-msgid "Tree"
-msgstr ""
-
-msgid "Unable to create resource"
+#, php-format
+msgid "Unable to create %s"
 msgstr ""
 
 msgid "Unable to delete resource"
 msgstr ""
 
-msgid "Unable to save resource"
+#, php-format
+msgid "Unable to save %s"
 msgstr ""
 
-msgid "Unable to update resource"
+#, php-format
+msgid "Unable to update %s"
+msgstr ""
+
+msgid "Unavailable provider"
 msgstr ""
 
 msgid "User"
@@ -390,7 +434,10 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
-msgid "View all on this category"
+msgid "Version"
+msgstr ""
+
+msgid "Versions"
 msgstr ""
 
 msgid "We can't find a user with that e-mail address."
@@ -420,10 +467,10 @@ msgstr ""
 msgid "a mistyped address"
 msgstr ""
 
-msgid "add"
+msgid "an out-of-date link"
 msgstr ""
 
-msgid "an out-of-date link"
+msgid "create"
 msgstr ""
 
 msgid "edit"
