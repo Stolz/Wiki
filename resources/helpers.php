@@ -6,7 +6,7 @@
  * @param  string
  * @return string
  */
-function markdown($source)
+function markup($source)
 {
 	return with(new \League\CommonMark\CommonMarkConverter())->convertToHtml($source);
 }
@@ -30,7 +30,7 @@ function pagination_links($presenter)
  */
 function tree(array $nodes, Closure $render = null)
 {
-	$output = '<ul>';
+	$output = '<ul class="no-bullet">';
 	foreach($nodes as $node)
 	{
 		// Get name
@@ -47,4 +47,18 @@ function tree(array $nodes, Closure $render = null)
 	}
 
 	return $output .'</ul>';
+}
+
+if ( ! function_exists('_'))
+{
+	/**
+	 * Dummy gettext alias. Workaround until HHVM supports Gettext PHP extension.
+	 *
+	 * @param  string
+	 * @return string
+	 */
+	function _($s)
+	{
+		return $s;
+	}
 }

@@ -1,6 +1,8 @@
-{!! link_to_route("$route.create", _('create'), ['parent_id' => '_id_'], ['class'=>'success label']) !!}
+<a data-dropdown="drop_id_" class="secondary label" data-options="align:left">+</a>
 
-{!! link_to_route("$route.edit", _('edit'), ['_id_'], ['class'=>'round label', 'class'=>'label']) !!}
+<a href="{{ route("$route.show", ['_id_']) }}">_name_</a>
 
-{!! link_to_route("$route.show", '_name_', ['_id_']) !!}
-
+<div id="drop_id_" class="f-dropdown tiny content" data-dropdown-content >
+	{!! link_to_route("$route.create", _('Create'), ['parent_id' => '_id_'], ['class' => 'tiny success button']) !!}
+	{!! link_to_route("$route.edit", _('Edit'), ['_id_'], ['class'=>'tiny button']) !!}
+</div>

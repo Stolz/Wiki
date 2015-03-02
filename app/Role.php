@@ -79,7 +79,7 @@ class Role extends Model
 	// Bussiness logic =============================================================
 
 	/**
-	 * Determine if role is authorized to execute $action on $resource.
+	 * Determine if $this role is authorized to execute $action on $resource.
 	 *
 	 * @param  string $action
 	 * @param  string $resource

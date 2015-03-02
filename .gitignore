@@ -3,6 +3,7 @@
 .*~
 /.env
 /.inotify
+/composer.lock
 /database/backups/
 /database/schema/
 /public/*/debugbar.*
