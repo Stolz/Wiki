@@ -54,7 +54,7 @@ class AuthController extends Controller
 		if(Input::has('code'))
 			return $this->loginSocialUser($provider, $oauthService->user());
 
-		// If we have configured some scopes use them, otherwise use defaults
+		// If we have configured some scopes use them
 		if($scopes = config("services.{$provider->slug}.scopes"))
 			$oauthService->scopes($scopes);
 

@@ -13,7 +13,7 @@
 			</nav>
 
 			{{-- LEFT --}}
-			<aside class="left-off-canvas-menu" style="min-height:100vh">
+			<aside class="left-off-canvas-menu">
 				@if ($currentUser)
 					@include('side.sections', ['sections' => $sections])
 					@include('side.me', ['user' => $currentUser])
@@ -25,7 +25,7 @@
 			</aside>
 
 			{{-- MAIN CONTAINER --}}
-			<div id="main" class="row">
+			<div id="main" class="row" style="min-height:100vh">
 				<br/>
 				{{-- FLASH MESSAGES --}}
 				@foreach (['error' => 'alert', 'success' => 'success', 'info' => '', 'secondary' => 'secondary'] as $flashMessage => $boxClass)

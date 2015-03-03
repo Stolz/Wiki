@@ -2,6 +2,6 @@
 
 @section('content')
 
-	Home page TODO
+	{!! $content !!}
 
 @stop

@@ -135,7 +135,7 @@ return [
 	|
 	*/
 
-	'domain' => null, //TODO set to .example.com to keep the session between subdomains
+	'domain' => null, //NOTE set to '.example.com' to keep the session between subdomains
 
 	/*
 	|--------------------------------------------------------------------------

@@ -167,6 +167,7 @@ return [
 		 * Package Service Providers...
 		 */
 		'App\Providers\BaumServiceProvider', //TODO workaround until 'Baum\BaumServiceProvider' supports Laravel 5
+		'Felixkiss\UniqueWithValidator\UniqueWithValidatorServiceProvider',
 		'Stolz\Assets\Laravel\ServiceProvider',
 		'Stolz\LaravelFormBuilder\ServiceProvider',
 

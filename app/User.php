@@ -110,8 +110,6 @@ class User extends Model implements AuthenticatableContract
 		$user->provider_id = $provider->id;
 		$user->language_id = app('language')->id;
 		$user->role_id = Role::whereIsDefault(true)->firstOrFail()->id;
-
-		//TODO validation
 		$user->save();
 
 		return $user;

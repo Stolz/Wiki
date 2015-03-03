@@ -14,7 +14,6 @@ class SocialLoginRequest
 	public function __construct()
 	{
 		$rules = [
-			// TODO make unique(['uuid', 'provider_id']
 			'uuid' => [_('Remote ID'), 'required|max:255'],
 			'name' => [_('Name'), 'max:255'],
 			'nickname' => [_('Nickname'), 'max:255'],

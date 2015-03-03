@@ -9,7 +9,9 @@ class HomeController extends Controller
 	 */
 	public function showHomePage()
 	{
-		return view('home')->withTitle(_('Home'));
+		$readme = markup(\File::get(base_path('readme.md')));
+
+		return view('home')->withTitle(_('Home'))->withContent($readme);
 	}
 
 	/**

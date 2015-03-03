@@ -103,7 +103,6 @@ class Language extends Model
 		// Helper function for adding information about where the language was detected from
 		$addOrigin = function ($language, $origin) {
 			$language->detectedFrom = $origin;
-			\Log::info("{$language->locale} $origin"); //TODO remove
 
 			return $language;
 		};

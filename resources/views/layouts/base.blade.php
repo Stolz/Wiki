@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ $appLanguage->code }}">
 	<head>
-
-		{{-- Current page info --}}
-		<title>{{ $title }} | {{ $appName }}</title>
-		@if (isset($description))
-		<meta name="description" content="{{{ substr($description , 0, 155) }}}" />{{--TODO make sure articles/pages provide a description--}}
-		@endif
-
 		{{-- Misc --}}
+		<title>{{ $title }} | {{ $appName }}</title>
 		<base href="/" />
 		<meta charset="utf-8">
 		<meta name="author" content="twitter: @Stolz" />
@@ -22,7 +16,7 @@
 		<meta http-equiv="cleartype" content="on" />{{-- Windows Mobile --}}
 
 		{{-- Favicon  --}}
-		<link rel="icon" href="favicon.ico" type="image/x-icon" />{{--TODO create a custom favicon.ico--}}
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 
 		{{-- CSS  --}}
 		{!! Assets::css() !!}

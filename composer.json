@@ -6,12 +6,13 @@
 	"type": "project",
 	"require": {
 		"baum/baum": "~1.0",
+		"felixkiss/uniquewith-validator": "2.*",
 		"gabrielbull/browser": "dev-master",
 		"laravel/framework": "5.0.*",
 		"laravel/socialite": "~2.0",
 		"league/commonmark": "dev-master",
 		"stolz/assets": "dev-master",
-		"stolz/laravel-form-builder": "dev-master"
+		"stolz/laravel-form-builder": "dev-master",
 	},
 	"require-dev": {
 		"barryvdh/laravel-debugbar": "dev-master",
@@ -47,5 +48,7 @@
 	},
 	"config": {
 		"preferred-install": "dist"
-	}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
