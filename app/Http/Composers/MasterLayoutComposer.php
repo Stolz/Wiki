@@ -19,6 +19,9 @@ class MasterLayoutComposer
 		// Current authenticated user
 		$view->with('currentUser', $user = Auth::user());
 
+		if( ! $user)
+			return;
+
 		// Navigation sections
 		$sections = [
 			'category' => _('Categories'),

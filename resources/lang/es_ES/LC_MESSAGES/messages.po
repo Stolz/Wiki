@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-02 11:02+0100\n"
+"POT-Creation-Date: 2015-03-03 12:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,6 +35,9 @@ msgstr "%s actualizado con éxito"
 
 msgid "Actions"
 msgstr "Acciones"
+
+msgid "Add page"
+msgstr "Añadir página"
 
 msgid "Are you sure?"
 msgstr "¿Estás seguro?"
@@ -180,6 +183,9 @@ msgstr "Página"
 msgid "Pages"
 msgstr "Páginas"
 
+msgid "Pages on subcategories"
+msgstr "Páginas en subcategorías"
+
 msgid "Parent"
 msgstr "Padre"
 
@@ -198,6 +204,9 @@ msgstr "Por favor primero mueve esas páginas a otra categoría"
 
 msgid "Please visit us again in a few minutes"
 msgstr "Por favor vuelve a intentar de nuevo un poco más tarde"
+
+msgid "Preview"
+msgstr "Vista previa"
 
 msgid "Previous"
 msgstr "Anterior"
@@ -470,8 +479,8 @@ msgstr "una dirección mal escrita"
 msgid "an out-of-date link"
 msgstr "un enlace antiguo"
 
-msgid "create"
-msgstr "crear"
+#~ msgid "create"
+#~ msgstr "crear"
 
-msgid "edit"
-msgstr "editar"
+#~ msgid "edit"
+#~ msgstr "editar"

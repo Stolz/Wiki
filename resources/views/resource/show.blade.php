@@ -36,8 +36,3 @@ $buttons = [
 	</p>
 
 @stop
-
-
-
-
-

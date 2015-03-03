@@ -19,4 +19,4 @@
 	Form::textarea('source')
 !!}
 
-
+@include("$directory.preview")
