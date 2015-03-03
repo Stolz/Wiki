@@ -13,7 +13,7 @@
 			</nav>
 
 			{{-- LEFT --}}
-			<aside class="left-off-canvas-menu">
+			<aside class="left-off-canvas-menu" style="min-height:100vh">
 				@if ($currentUser)
 					@include('side.sections', ['sections' => $sections])
 					@include('side.me', ['user' => $currentUser])
@@ -46,19 +46,4 @@
 		</div><!--.inner-wrap-->
 	</div><!--.off-canvas-wrap-->
 	{{-- END OFFCANVAS --}}
-@stop
-
-
-@section('js')
-@parent
-<script>
-$(document).ready(function() {
-
-	// Make canvas content as tall as possible
-	var $main = $('#main'), height = Math.max($doc.height(), $(window).height());
-	if($main.height() < height)
-		$main.height(height);
-
-});
-</script>
 @stop
