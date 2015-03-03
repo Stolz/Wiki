@@ -54,7 +54,7 @@ class Version extends Model
 
 	public function user()
 	{
-		return $this->belongsTo('App\Page');
+		return $this->belongsTo('App\User');
 	}
 
 	// Events ======================================================================
@@ -70,7 +70,7 @@ class Version extends Model
 	{
 		$version = new static;
 		$version->name = $page->name;
-		$version->body = $page->source;
+		$version->source = $page->source;
 		$version->ip_address = Request::getClientIp();
 		$version->page_id = $page->id;
 		$version->user_id = Auth::user()->id;

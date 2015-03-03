@@ -5,7 +5,6 @@ use App\Provider;
 use App\User;
 use Auth;
 use Config;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Input;
 use Laravel\Socialite\Contracts\User as SocialUser;
 use Session;

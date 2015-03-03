@@ -34,8 +34,10 @@ Route::group(['https', 'middleware' => 'auth'], function () {
 		Route::resource('category', 'CategoryController');
 		Route::resource('language', 'LanguageController');
 		Route::resource('page', 'PageController');
+		Route::resource('page.version', 'VersionController', ['only' => ['index', 'show']]);
 		Route::resource('provider', 'ProviderController');
 		Route::resource('role', 'RoleController');
 		Route::resource('user', 'UserController');
+
 	});
 });

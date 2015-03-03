@@ -11,6 +11,7 @@
 		"laravel/framework": "5.0.*",
 		"laravel/socialite": "~2.0",
 		"league/commonmark": "dev-master",
+		"phpspec/php-diff": "~1.0",
 		"stolz/assets": "dev-master",
 		"stolz/laravel-form-builder": "dev-master"
 	},

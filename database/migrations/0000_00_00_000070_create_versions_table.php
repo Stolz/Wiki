@@ -20,7 +20,7 @@ class CreateVersionsTable extends Migration
 
 			// Ordinary columns
 			$table->string('name');
-			$table->longText('body');
+			$table->longText('source');
 			$table->string('ip_address', 45);
 
 			// Foreign keys
