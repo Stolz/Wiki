@@ -71,8 +71,11 @@ class CategoryController extends ResourceController
 		// Get subcategories
 		$subcategories = $this->resource->getDescendants();
 
-		// Get pages (including subcategories)
-		$pages = Page::whereIn('category_id', $this->resource->getDescendantsAndSelf()->lists('id'))->orderBy('name')->get();
+		// Get pages this category
+		$pages = $this->resource->pages()->orderBy('name')->get();
+
+		// Get pages of subcategories
+		$subpages = Page::whereIn('category_id', $subcategories->lists('id'))->orderBy('name')->get();
 
 		// Function to render a tree node
 		$render = function (array $node) {
@@ -82,7 +85,7 @@ class CategoryController extends ResourceController
 		// Build subcategories tree
 		$tree = tree($subcategories->toHierarchy()->toArray(), $render);
 
-		View::share(compact('pages', 'subcategories', 'tree'));
+		View::share(compact('pages', 'subpages', 'subcategories', 'tree'));
 
 		return parent::show($id);
 	}

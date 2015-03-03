@@ -2,6 +2,7 @@
 
 return [
 	'autoload' => ['foundation-cdn'],
+	'public_dir' => public_path(),
 	'collections' => [
 
 		// jQuery 2.x (CDN)

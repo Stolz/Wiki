@@ -10,8 +10,10 @@
 	_('Is admin') => ($resource->is_admin) ? _('Yes') : _('No'),
 ]; ?>
 
-<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+<dl>
 	@foreach ($fields as $label => $value)
-	<li><b>{{ $label }}:</b> {{ $value }}</li>
+		<dt>{{ $label }}</dt>
+		<dd>{{ $value }}</dd>
 	@endforeach
-</ul>
+</dl>
+

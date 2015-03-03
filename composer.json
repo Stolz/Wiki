@@ -16,6 +16,7 @@
 	"require-dev": {
 		"barryvdh/laravel-debugbar": "dev-master",
 		"filp/whoops": "~1.0",
+		"spatie/laravel-tail": "~1.0",
 		"squizlabs/php_codesniffer": "~2",
 		"stolz/laravel-html-tidy": "dev-master"
 	},

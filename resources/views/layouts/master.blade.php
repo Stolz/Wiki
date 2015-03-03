@@ -16,6 +16,7 @@
 			<aside class="left-off-canvas-menu">
 				@if ($currentUser)
 					@include('side.sections', ['sections' => $sections])
+					@include('side.me', ['user' => $currentUser])
 				@else
 					@include('side.login')
 				@endif
@@ -49,6 +50,7 @@
 
 
 @section('js')
+@parent
 <script>
 $(document).ready(function() {
 

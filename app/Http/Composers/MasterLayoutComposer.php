@@ -17,18 +17,25 @@ class MasterLayoutComposer
 		$view->with('appName', config('app.name'));
 
 		// Current authenticated user
-		$view->with('currentUser', Auth::user());
+		$view->with('currentUser', $user = Auth::user());
 
 		// Navigation sections
 		$sections = [
-			'category.index' => _('Categories'),
-			'language.index' => _('Languages'),
-			'page.index' => _('Pages'),
-			'provider.index' => _('Providers'),
-			'role.index' => _('Roles'),
-			'user.index' => _('Users'),
+			'category' => _('Categories'),
+			'language' => _('Languages'),
+			'page'     => _('Pages'),
+			'provider' => _('Providers'),
+			'role'     => _('Roles'),
+			'user'     => _('Users'),
 		];
-		asort($sections);
+
+		// Filter out unauthorized sections
+		$sections = array_filter($sections, function ($section) use ($user) {
+			return $user->can('index', $section);
+		});
+
+		// Natural sort
+		natcasesort($sections);
 		$view->with('sections', $sections);
 	}
 }

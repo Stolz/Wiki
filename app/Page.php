@@ -76,7 +76,7 @@ class Page extends Model
 
 		static::saved(function ($page) {
 			// Build markup
-			$markup = markdown($page->source);
+			$markup = markup($page->source);
 			self::where([$page->getKeyName() => $page->getKey()])->limit(1)->update(['markup' => $markup]);
 
 			// Backup version
