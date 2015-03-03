@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
 			$table->string('uuid');
 			$table->string('name')->nullable();
 			$table->string('nickname')->nullable();
-			$table->string('email');
+			$table->string('email')->nullable();
 			$table->string('avatar')->nullable();
 			$table->unsignedInteger('login_count')->default(0);
 

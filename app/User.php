@@ -33,7 +33,10 @@ class User extends Model implements AuthenticatableContract
 	 */
 	public function __toString()
 	{
-		return (string) ($this->nickname) ?: $this->name;
+		if($this->nickname)
+			return (string) $this->nickname;
+
+		return (string) ($this->name) ?: $this->uuid;
 	}
 
 	/**

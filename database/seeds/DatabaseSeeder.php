@@ -21,8 +21,19 @@ class DatabaseSeeder extends Seeder
 		$this->call('LanguagesTableSeeder');
 		$this->call('ProvidersTableSeeder');
 		$this->call('RolesTableSeeder');
-		$this->call('UsersTableSeeder');
-		$this->call('CategoriesTableSeeder');
-		$this->call('PagesTableSeeder');
+
+		/*
+		 * To trigger this use either:
+		 *
+		 *	php artisan db:seed --env=local
+		 *	php artisan migrate:refresh --seed --env=local
+		 *
+		 */
+		if (app()->environment('local'))
+		{
+			$this->call('UsersTableSeeder');
+			$this->call('CategoriesTableSeeder');
+			$this->call('PagesTableSeeder');
+		}
 	}
 }

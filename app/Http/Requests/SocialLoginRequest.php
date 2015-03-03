@@ -17,8 +17,9 @@ class SocialLoginRequest
 			'uuid' => [_('Remote ID'), 'required|max:255'],
 			'name' => [_('Name'), 'max:255'],
 			'nickname' => [_('Nickname'), 'max:255'],
-			'email' => [_('E-mail'), 'required|max:255|email'],
+			'email' => [_('E-mail'), 'max:255|email'],
 			'avatar' => [_('Avatar'), 'max:255|url'],
+			//'verified' => ['not used', 'required|same:require_verified'],
 		];
 
 		list($this->labels, $this->rules) = Request::parseRulesAndLabels($rules);
@@ -38,8 +39,14 @@ class SocialLoginRequest
 			'nickname' => $socialUser->getNickname(),
 			'email' => $socialUser->getEmail(),
 			'avatar' => $socialUser->getAvatar(),
+
+			// Require that the account has been verified by the provider
+			//'require_verified' => true,
+			//'verified' => $socialUser->offsetGet('verified'),
 		];
 
-		return Validator::make($input, $this->rules)->setAttributeNames($this->labels)->errors();
+		$customMessages = ['same' => _('Your account is not verified')];
+
+		return Validator::make($input, $this->rules, $customMessages)->setAttributeNames($this->labels)->errors();
 	}
 }

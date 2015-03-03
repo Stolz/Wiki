@@ -32,4 +32,9 @@ return [
 		'scopes'        => ['profile', 'email'],
 	],
 
+	'twitter' => [
+		'client_id'     => env('TWITTER_OAUTH_CLIENT_ID'),
+		'client_secret' => env('TWITTER_OAUTH_CLIENT_SECRET'),
+	],
+
 ];

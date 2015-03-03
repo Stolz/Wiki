@@ -50,16 +50,22 @@ class AuthController extends Controller
 		// Create an Oauth service for this provider
 		$oauthService = Socialite::with($provider->slug);
 
-		// Check if current request is a callback from the provider
-		if(Input::has('code'))
-			return $this->loginSocialUser($provider, $oauthService->user());
+		// If this is a callback from the provider the user information
+		// should be available, otherwise an exception will be thrown
+		try
+		{
+			if($user = $oauthService->user())
+				return $this->loginSocialUser($provider, $user);
+		}
+		catch(\InvalidArgumentException $e)
+		{
+			// This is not a callback request.
+			// Redirect user to authorize our App.
+			if($scopes = config("services.{$provider->slug}.scopes"))
+				$oauthService->scopes($scopes);
 
-		// If we have configured some scopes use them
-		if($scopes = config("services.{$provider->slug}.scopes"))
-			$oauthService->scopes($scopes);
-
-		// Request user to authorize our App
-		return $oauthService->redirect();
+			return $oauthService->redirect();
+		}
 	}
 
 	/**
@@ -67,7 +73,7 @@ class AuthController extends Controller
 	 *
 	 * It creates/gets the user and logs him/her in.
 	 *
-	 * @param  Provider
+	 * @param  \App\Provider
 	 * @param  \Laravel\Socialite\Contracts\User
 	 * @return Response
 	 */
