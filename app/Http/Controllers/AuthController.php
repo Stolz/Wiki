@@ -49,22 +49,34 @@ class AuthController extends Controller
 		// Create an Oauth service for this provider
 		$oauthService = Socialite::with($provider->slug);
 
-		// If this is a callback from the provider the user information
-		// should be available, otherwise an exception will be thrown
+		// Oauth 2
+		if($oauthService instanceof \Laravel\Socialite\Two\AbstractProvider)
+		{
+			// Check if current request is a callback from the provider
+			if(Input::has('code'))
+				return $this->loginSocialUser($provider, $oauthService->user());
+
+			// If we have configured custom scopes use them
+			if($scopes = config("services.{$provider->slug}.scopes"))
+				$oauthService->scopes($scopes);
+		}
+		// Oauth 1
+		else
 		try
 		{
+			// Check if current request is a final callback from the provider
 			if($user = $oauthService->user())
 				return $this->loginSocialUser($provider, $user);
 		}
 		catch(\InvalidArgumentException $e)
 		{
-			// This is not a callback request.
-			// Redirect user to authorize our App.
-			if($scopes = config("services.{$provider->slug}.scopes"))
-				$oauthService->scopes($scopes);
-
-			return $oauthService->redirect();
+			// This is not the final callback.
+			// As both Oauth 1 and Oauth 2 need redirecting at this
+			// point the redirection is done outside the 'catch' block.
 		}
+
+		// Request user to authorize our App
+		return $oauthService->redirect();
 	}
 
 	/**
@@ -87,7 +99,7 @@ class AuthController extends Controller
 			return $this->goBack($providerError . ': ' . implode(', ', $errors->all()));
 		}
 
-		// Get/create user matching social user
+		// Get/create an application user matching the social user
 		$user = User::findOrCreate($provider, $socialUser);
 
 		// If user has been disabled disallow login
