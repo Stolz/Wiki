@@ -2,6 +2,7 @@
 
 use App\Page;
 use App\Version;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use URL;
 
 class VersionController extends Controller
@@ -42,15 +43,24 @@ class VersionController extends Controller
 		// Make sure no more than two version ids are used
 		$versionIds = array_slice(explode('-', $versionIds), 0, 2);
 
-		// Get versions
+		// Get versions with oldest first
 		$versions = $page->versions()->whereIn('id', $versionIds)->oldest()->with('user')->get();
 
 		$count = $versions->count();
 
+		if($count === 0)
+			throw (new ModelNotFoundException)->setModel('App\Version');
+
+		// Compare versions
 		if($count === 2)
 			return $this->compareVersions($versions->first(), $versions->last());
 
-		//TODO handle $count === 1 and $count === 0
+		// Show single version
+		return view('version.show', [
+			'version'  => $version = $versions->first(),
+			'title'    => $version->singular,
+			'subtitle' => $version->name,
+		]);
 	}
 
 	/**
