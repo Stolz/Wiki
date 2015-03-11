@@ -25,9 +25,17 @@ class AppServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$this->app->bind(
-			'Illuminate\Contracts\Auth\Registrar',
-			'App\Services\Registrar'
-		);
+		// Load environment Specific Service Providers...
+		if($this->app->environment('local'))
+		{
+			$providers = [
+				'Barryvdh\Debugbar\ServiceProvider',
+				'Spatie\Tail\TailServiceProvider',
+				'Stolz\HtmlTidy\ServiceProvider',
+			];
+
+			foreach($providers as $provider)
+				$this->app->register($provider);
+		}
 	}
 }

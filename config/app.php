@@ -171,12 +171,6 @@ return [
 		'Stolz\Assets\Laravel\ServiceProvider',
 		'Stolz\LaravelFormBuilder\ServiceProvider',
 
-		/*
-		 * Environment Specific Service Providers...
-		 */
-		'Barryvdh\Debugbar\ServiceProvider', //TODO Remove on production environment
-		'Spatie\Tail\TailServiceProvider',   //TODO Remove on production environment
-		'Stolz\HtmlTidy\ServiceProvider',    //TODO Remove on production environment
 	],
 
 	/*
