@@ -49,31 +49,13 @@ class AuthController extends Controller
 		// Create an Oauth service for this provider
 		$oauthService = Socialite::with($provider->slug);
 
-		// Oauth 2
-		if($oauthService instanceof \Laravel\Socialite\Two\AbstractProvider)
-		{
-			// Check if current request is a callback from the provider
-			if(Input::has('code'))
-				return $this->loginSocialUser($provider, $oauthService->user());
+		// Check if current request is a callback from the provider
+		if(Input::has('oauth_token')/*Oauth 1*/ or Input::has('code')/*Oauth 2*/)
+			return $this->loginSocialUser($provider, $oauthService->user());
 
-			// If we have configured custom scopes use them
-			if($scopes = config("services.{$provider->slug}.scopes"))
-				$oauthService->scopes($scopes);
-		}
-		// Oauth 1
-		else
-		try
-		{
-			// Check if current request is a final callback from the provider
-			if($user = $oauthService->user())
-				return $this->loginSocialUser($provider, $user);
-		}
-		catch(\InvalidArgumentException $e)
-		{
-			// This is not the final callback.
-			// As both Oauth 1 and Oauth 2 need redirecting at this
-			// point the redirection is done outside the 'catch' block.
-		}
+		// If we have configured custom scopes use them
+		if($scopes = config("services.{$provider->slug}.scopes"))
+			$oauthService->scopes($scopes);
 
 		// Request user to authorize our App
 		return $oauthService->redirect();
