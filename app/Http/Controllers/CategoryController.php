@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateCategoryRequest as CreateRequest;
-use App\Http\Requests\CreateCategoryRequest as UpdateRequest;
+use App\Http\Requests\UpdateCategoryRequest as UpdateRequest;
 use App\Category as Model;
 use App\Page;
 use View;
@@ -124,9 +124,9 @@ class CategoryController extends ResourceController
 
 		// If no 'parent_id' was provided it means the resource is a root node
 		if($parentId = intval($request->input('parent_id')))
-			$this->resource->makeRoot();
-		else
 			$this->resource->makeChildOf(Model::findOrFail($parentId));
+		else
+			$this->resource->makeRoot();
 
 		return $response;
 	}
