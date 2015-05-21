@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateCategoryRequest as CreateRequest;
-use App\Http\Requests\UpdateCategoryRequest as UpdateRequest;
+use App\Http\Requests\CreateCategoryRequest as UpdateRequest;
 use App\Category as Model;
 use App\Page;
 use View;
