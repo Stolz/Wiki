@@ -31,24 +31,7 @@ class PageController extends ResourceController
 		$this->resource = $this->resource->findOrFail($id);
 		$this->subtitle = $this->resource;
 
-		// Add wiki page assets
-		\Assets::add('wiki.css');
-
 		return parent::show($id);
-	}
-
-	/**
-	 * Display a form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		// Add wiki page assets
-		\Assets::add('wiki.css');
-
-		return parent::edit($id);
 	}
 
 	/**

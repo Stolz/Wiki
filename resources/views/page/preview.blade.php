@@ -1,6 +1,6 @@
 {{-- Live preview of Markdown --}}
 
-<?php Assets::add('marked.js') ?>
+<?php Assets::add(['wiki.css', 'marked.js']) ?>
 
 <fieldset>
 	<legend><label>{{ _('Preview') }}</label></legend>
