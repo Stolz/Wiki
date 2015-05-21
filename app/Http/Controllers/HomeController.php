@@ -1,14 +1,20 @@
 <?php namespace App\Http\Controllers;
 
+use Auth;
+
 class HomeController extends Controller
 {
 	/**
 	 * Show home page.
+	 * If the user is already logged in, show categories, otherwise show README.
 	 *
 	 * @return Response
 	 */
 	public function showHomePage()
 	{
+		if(Auth::check())
+			return redirect(route('category.index'));
+
 		$readme = markup(\File::get(base_path('readme.md')));
 
 		return view('home')->withTitle(_('Home'))->withContent($readme);
