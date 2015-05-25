@@ -23,6 +23,7 @@ class VersionController extends Controller
 			'title' => _('Versions'),
 			'subtitle' => $page,
 			'versions' => $page->versions()->latest()->with('user')->paginate(),
+			'compareUrl' => route('page.version.show', [$page->id]),
 			'returnUrl' => (false !== strpos(URL::previous(), '?page=')) ? URL::previous() : route('page.show', [$page->id]),
 		]);
 	}
