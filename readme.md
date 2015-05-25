@@ -17,13 +17,67 @@ This project is not intended to be a mass distributed real world application but
 
 ## Install
 
-Via composer
-
-	composer create-project stolz/wiki --prefer-dist --stability=dev
-
 Via git
 
-	git clone https://github.com/Stolz/Wiki.git --depth 1 && cd Wiki && composer install
+	git clone https://github.com/Stolz/Wiki.git --depth 1 wiki && cd wiki && composer install
+
+
+Via composer
+
+	composer create-project stolz/wiki --prefer-dist --stability=dev && cd wiki
+
+
+Once the project is installed configure it as any other Laravel app
+
+	$EDITOR .env
+	$EDITOR config/app.php
+	php artisan migrate --seed
+
+## Customizing permissions
+
+Trying to perform an action (create, update, delete, ...) on any of the wiki resources (users, pages, categories, ...) will trigger the `can()` method on the `app/Role.php` file with the corresponding action and resouce parameters.
+
+The default implementation of the function is very relaxed and allows all user roles to perform all action on all resources.
+
+	/**
+	 * Determine if $this role is authorized to execute $action on $resource.
+	 *
+	 * @param  string $action
+	 * @param  string $resource
+	 * @return bool
+	 */
+	public function can($action, $resource)
+	{
+		return true;
+	}
+
+To customize which actions can perform each user role you only need to add your logic to this method. A silly example could be:
+
+	// file: app/Role.php
+	public function can($action, $resource)
+	{
+		$currentUserProfile = $this->name;
+
+		// Admin role has no restrictions
+		if ($currentUserProfile === 'admin')
+			return true;
+
+		// Relaxed read permissions for all roles
+		if($action === 'index' or $action === 'show')
+			return true;
+
+		// Editor role can edit pages
+		if ($currentUserProfile === 'editor' and $resouce === 'page' and $action === 'edit')
+			return true;
+
+		// Manager role has full access to categories
+		if ($currentUserProfile === 'manager' and $resouce === 'category')
+			return true;
+
+		return false;
+	}
+
+If you still want a more advanced permissions system feel free to fully replace the `Permissions` middleware located at `app/Http/Middleware/Permissions.php`.
 
 ## License
 
