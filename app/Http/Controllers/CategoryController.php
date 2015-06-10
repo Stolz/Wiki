@@ -4,7 +4,6 @@ use App\Http\Requests\CreateCategoryRequest as CreateRequest;
 use App\Http\Requests\CreateCategoryRequest as UpdateRequest;
 use App\Category as Model;
 use App\Page;
-use View;
 
 class CategoryController extends ResourceController
 {
@@ -85,7 +84,7 @@ class CategoryController extends ResourceController
 		// Build subcategories tree
 		$tree = tree($subcategories->toHierarchy()->toArray(), $render);
 
-		View::share(compact('pages', 'subpages', 'subcategories', 'tree'));
+		view()->share(compact('pages', 'subpages', 'subcategories', 'tree'));
 
 		return parent::show($id);
 	}
@@ -141,7 +140,7 @@ class CategoryController extends ResourceController
 	 */
 	protected function showForm($subtitle, $action, $method = 'POST')
 	{
-		View::share('categories', \App\Category::dropdown());
+		view()->share('categories', \App\Category::dropdown());
 
 		return parent::showForm($subtitle, $action, $method);
 	}

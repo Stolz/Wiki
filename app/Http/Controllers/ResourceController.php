@@ -4,7 +4,6 @@ use DomainException;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Session;
-use View;
 
 abstract class ResourceController extends Controller
 {
@@ -61,7 +60,7 @@ abstract class ResourceController extends Controller
 		$this->setDefaults();
 
 		// Pass metadata to the view
-		View::share([
+		view()->share([
 			'route' => $this->route,
 			'directory' => $this->directory,
 		]);

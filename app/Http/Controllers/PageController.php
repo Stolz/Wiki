@@ -3,7 +3,6 @@
 use App\Http\Requests\CreatePageRequest as CreateRequest;
 use App\Http\Requests\CreatePageRequest as UpdateRequest;
 use App\Page as Model;
-use View;
 
 class PageController extends ResourceController
 {
@@ -67,7 +66,7 @@ class PageController extends ResourceController
 	 */
 	protected function showForm($subtitle, $action, $method = 'POST')
 	{
-		View::share('categories', \App\Category::dropdown());
+		view()->share('categories', \App\Category::dropdown());
 
 		return parent::showForm($subtitle, $action, $method);
 	}
