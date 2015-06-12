@@ -17,10 +17,6 @@ class AppServiceProvider extends ServiceProvider
 	/**
 	 * Register any application services.
 	 *
-	 * This service provider is a great spot to register your various container
-	 * bindings with the application. As you can see, we are registering our
-	 * "Registrar" implementation here. You can add your own bindings too!
-	 *
 	 * @return void
 	 */
 	public function register()
@@ -29,9 +25,9 @@ class AppServiceProvider extends ServiceProvider
 		if($this->app->environment('local'))
 		{
 			$providers = [
-				'Barryvdh\Debugbar\ServiceProvider',
-				'Spatie\Tail\TailServiceProvider',
-				'Stolz\HtmlTidy\ServiceProvider',
+				\Barryvdh\Debugbar\ServiceProvider::class,
+				\Spatie\Tail\TailServiceProvider::class,
+				\Stolz\HtmlTidy\ServiceProvider::class,
 			];
 
 			foreach($providers as $provider)

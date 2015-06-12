@@ -70,9 +70,9 @@ return [
 		"string"  => _("The :attribute must be :size characters."),
 		"array"   => _("The :attribute must contain :size items."),
 	],
+	"timezone"             => _("The :attribute must be a valid zone."),
 	"unique"               => _("The :attribute has already been taken."),
 	"url"                  => _("The :attribute format is invalid."),
-	"timezone"             => _("The :attribute must be a valid zone."),
 
 	/*
 	|--------------------------------------------------------------------------

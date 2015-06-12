@@ -29,11 +29,11 @@ return [
 	'stores' => [
 
 		'apc' => [
-			'driver' => 'apc'
+			'driver' => 'apc',
 		],
 
 		'array' => [
-			'driver' => 'array'
+			'driver' => 'array',
 		],
 
 		'database' => [
@@ -44,7 +44,7 @@ return [
 
 		'file' => [
 			'driver' => 'file',
-			'path'   => storage_path().'/framework/cache',
+			'path'   => storage_path('framework/cache'),
 		],
 
 		'memcached' => [

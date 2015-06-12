@@ -35,5 +35,7 @@ class DatabaseSeeder extends Seeder
 			$this->call('CategoriesTableSeeder');
 			$this->call('PagesTableSeeder');
 		}
+
+		Model::reguard();
 	}
 }

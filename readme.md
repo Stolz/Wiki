@@ -4,7 +4,7 @@ A simple PHP wiki engine.
 
 ## Features
 
-- Backend based on [Laravel 5](http://laravel.com) PHP framework. The code has a minimal footprint which makes the application very easy to customize to your needs.
+- Backend based on [Laravel 5.1](http://laravel.com) PHP framework. The code has a minimal footprint which makes the application very easy to customize to your needs.
 - Frontend based on [Zurb Foundation](http://foundation.zurb.com) CSS framework which gives a clean responsive layout and a mobile-friendly user experience.
 - Pages are written in [Markdown](http://en.wikipedia.org/wiki/Markdown) with live preview of the final markup.
 - User authentication/registration with one click via Oauth providers (Facebook, GitHub, Google and Twitter).

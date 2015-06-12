@@ -50,7 +50,7 @@ class VersionController extends Controller
 		$count = $versions->count();
 
 		if($count === 0)
-			throw (new ModelNotFoundException)->setModel('App\Version');
+			throw with(new ModelNotFoundException)->setModel('App\Version');
 
 		// Compare versions
 		if($count === 2)

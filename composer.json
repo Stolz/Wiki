@@ -5,10 +5,11 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
+		"php": ">=5.5.9",
 		"baum/baum": "~1.1",
 		"felixkiss/uniquewith-validator": "2.*",
 		"gabrielbull/browser": "dev-master",
-		"laravel/framework": "5.0.*",
+		"laravel/framework": "5.1.*",
 		"laravel/socialite": "~2.0",
 		"league/commonmark": "dev-master",
 		"phpspec/php-diff": "~1.0",
@@ -18,6 +19,7 @@
 	"require-dev": {
 		"barryvdh/laravel-debugbar": "dev-master",
 		"filp/whoops": "~1.0",
+		"phpunit/phpunit": "~4.0",
 		"spatie/laravel-tail": "~1.0",
 		"squizlabs/php_codesniffer": "~2",
 		"stolz/laravel-html-tidy": "dev-master"
@@ -42,8 +44,10 @@
 			"php artisan clear-compiled",
 			"php artisan optimize"
 		],
+		"post-root-package-install": [
+			"php -r \"copy('.env.example', '.env');\""
+		],
 		"post-create-project-cmd": [
-			"php -r \"copy('.env.example', '.env');\"",
 			"php artisan key:generate"
 		]
 	},

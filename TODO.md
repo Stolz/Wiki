@@ -1,0 +1,3 @@
+# Pending tasks
+
+- Functional tests

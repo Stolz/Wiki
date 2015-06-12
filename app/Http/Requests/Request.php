@@ -1,7 +1,7 @@
 <?php namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Validator;
 
 abstract class Request extends FormRequest
 {
@@ -159,7 +159,7 @@ abstract class Request extends FormRequest
 	/**
 	 * Handle a failed validation attempt.
 	 *
-	 * @param  \Illuminate\Validation\Validator  $validator
+	 * @param  \Illuminate\Contracts\Validation\Validator  $validator.
 	 * @return mixed
 	 */
 	protected function failedValidation(Validator $validator)

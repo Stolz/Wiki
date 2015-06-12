@@ -13,7 +13,7 @@ class Handler extends ExceptionHandler
 	 * @var array
 	 */
 	protected $dontReport = [
-		'Symfony\Component\HttpKernel\Exception\HttpException'
+		\Symfony\Component\HttpKernel\Exception\HttpException::class,
 	];
 
 	protected $httpCodes = [
@@ -93,7 +93,7 @@ class Handler extends ExceptionHandler
 			return (class_exists('Whoops\\Run')) ? $this->whoops($e) : parent::render($request, $e);
 
 		// Get code
-		$code = ($e instanceof HttpException) ? $e->getStatusCode() : $e->geCode();
+		$code = ($e instanceof HttpException) ? $e->getStatusCode() : $e->getCode();
 
 		// Get message
 		$message = $e->getMessage();
@@ -109,7 +109,7 @@ class Handler extends ExceptionHandler
 			'code'  => $code
 		];
 
-		return Response::view($view, $data, $code);
+		return Response::view($view, $data, (isset($this->httpCodes[$code]) ? $code : 500));
 	}
 
 	/**
