@@ -1,6 +1,7 @@
 *.kate-swp
 *~
 .*~
+.kateproject*
 /.env
 /.inotify
 /composer.lock
