@@ -1,6 +1,8 @@
 {
 	"private": true,
-	"dependencies": {},
+	"dependencies": {
+		"marked": "latest"
+	},
 	"devDependencies": {
 		"gulp": "^3.8.8",
 		"bower": "^1.4.1",
