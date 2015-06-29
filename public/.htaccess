@@ -14,7 +14,8 @@
 	#RewriteCond %{HTTPS} =off
 	#RewriteRule ^(index\.php\/)?(login|logout|auth|api).*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # Redirect Trailing Slashes...
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
 
     # Handle Front Controller...

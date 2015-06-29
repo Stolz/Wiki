@@ -1,0 +1,7 @@
+{
+	"name": "wiki",
+	"private": "true",
+	"dependencies": {
+		"foundation": "latest"
+	}
+}

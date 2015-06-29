@@ -7,8 +7,10 @@
 /composer.lock
 /database/backups/
 /database/schema/
+/node_modules/
 /public/*/debugbar.*
 /public/*/min/
+/resources/assets/bower/
 /resources/lang/*/LC_MESSAGES/messages.po.old
 /storage/debugbar/
 /storage/gettext/

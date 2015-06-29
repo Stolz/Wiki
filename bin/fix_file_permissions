@@ -29,7 +29,7 @@ $SUDO find . -type d -exec chmod 770 {} \;
 $SUDO find . -type f -exec chmod 660 {} \;
 
 # Exec permission for scripts
-$SUDO chmod 760 artisan bin/* vendor/bin/*
+$SUDO chmod 760 artisan bin/* vendor/bin/* node_modules/.bin/*
 
 exit 0
 

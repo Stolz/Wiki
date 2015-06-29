@@ -1,0 +1,82 @@
+#!/bin/sh
+
+source "$( cd "$( dirname "$0" )" && pwd )/common" || exit 1
+go_to_laravel_dir
+
+# Show script help
+function usage
+{
+	color "Usage:" "yellow"
+	echo
+	color "    $0 -option" "cyan"
+	echo
+	color "where 'option' is one of:" "yellow"
+	echo
+	color "   -i (install) : Install NPM modules and Bower components" "cyan"
+	color "   -u (update)  : Update NPM modules and Bower components" "cyan"
+	color "   -b (build)   : Build assets uncompressed" "cyan"
+	color "   -c (compress): Build assets compressed for production" "cyan"
+	color "   -w (watch)   : Watch assets and build them as soon as they change" "cyan"
+	color "   -h (help)    : Show this menu" "cyan"
+	echo
+}
+
+# Show wrong parameters error message
+function wrong_parameters
+{
+	color "Wrong parameters" "red"
+	usage
+	exit 1;
+}
+
+# Alias dont work insde scripts
+gulp=./node_modules/.bin/gulp
+bower=./node_modules/.bin/bower
+
+# Read command line parameters
+while getopts "iubcwh" opt; do
+case $opt in
+	i)
+		# Instal dependencies
+		npm install
+		$bower install
+		exit 0;
+	;;
+
+	u)
+		# Update dependencies
+		npm update
+		$bower update
+		exit 0;
+	;;
+
+	b)
+		# Build uncompressed
+		$gulp
+		exit 0;
+	;;
+
+	c)
+		# Build compressed for production
+		$gulp --production
+		exit 0;
+	;;
+
+	w)
+		#  Watch for changes and build uncompressed
+		$gulp watch
+		exit 0;
+	;;
+
+	h)
+	usage
+	exit 0
+	;;
+
+	\?)
+	wrong_parameters
+	;;
+esac
+done
+
+[[ $OPTIND -eq 0 ]] || wrong_parameters
