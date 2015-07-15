@@ -2,7 +2,6 @@
 
 use App\Language;
 use App\User;
-use Auth;
 use Event;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -36,7 +35,7 @@ class EventServiceProvider extends ServiceProvider
 			$language->apply()->remember();
 
 			// Update user's language
-			if($user = Auth::user())
+			if($user = auth()->user())
 				$user->language()->associate($language)->save();
 
 			// Feedback

@@ -1,6 +1,5 @@
 <?php namespace App\Http\Composers;
 
-use Auth;
 use Illuminate\Contracts\View\View;
 
 class MasterLayoutComposer
@@ -17,7 +16,7 @@ class MasterLayoutComposer
 		$view->with('appName', config('app.name'));
 
 		// Current authenticated user
-		$view->with('currentUser', $user = Auth::user());
+		$view->with('currentUser', $user = auth()->user());
 
 		if( ! $user)
 			return;

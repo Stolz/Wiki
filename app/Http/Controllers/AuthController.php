@@ -3,7 +3,6 @@
 use App\Http\Requests\SocialLoginRequest;
 use App\Provider;
 use App\User;
-use Auth;
 use Config;
 use Input;
 use Laravel\Socialite\Contracts\User as SocialUser;
@@ -89,7 +88,7 @@ class AuthController extends Controller
 			return $this->goBack(_('Your account has been disabled'));
 
 		// Login user
-		Auth::login($user);
+		auth()->login($user);
 
 		return redirect()->intended(route('home'));
 	}
@@ -101,7 +100,7 @@ class AuthController extends Controller
 	 */
 	public function logout()
 	{
-		Auth::logout();
+		auth()->logout();
 
 		return redirect()->route('home');
 	}

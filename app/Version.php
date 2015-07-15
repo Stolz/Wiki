@@ -1,6 +1,5 @@
 <?php namespace App;
 
-use Auth;
 use Request;
 use Illuminate\Database\Eloquent\Model;
 
@@ -73,7 +72,7 @@ class Version extends Model
 		$version->source = $page->source;
 		$version->ip_address = Request::getClientIp();
 		$version->page_id = $page->id;
-		$version->user_id = Auth::user()->id;
+		$version->user_id = auth()->user()->id;
 
 		return $version->save();
 	}

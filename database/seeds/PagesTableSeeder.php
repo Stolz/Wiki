@@ -12,7 +12,7 @@ class PagesTableSeeder extends Seeder
 		$categories = Category::roots()->first()->getDescendantsAndSelf();
 
 		// Pretend first ser has logged in
-		Auth::loginUsingId($i = 1);
+		auth()->loginUsingId($i = 1);
 
 		// Add a page for each category of the subtree
 		foreach($categories as $category)

@@ -3,7 +3,6 @@
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use Response;
 
 class Handler extends ExceptionHandler
 {
@@ -100,16 +99,15 @@ class Handler extends ExceptionHandler
 		if(empty($message) and isset($this->httpCodes[$code]))
 			$message = $this->httpCodes[$code];
 
-		// If a custom view exist use it, otherwise use generic error page
-		$view = (file_exists(base_path("resources/views/errors/$code.blade.php"))) ? "errors/$code" : 'layouts/error';
-
-		// Data for the view
-		$data = [
+		// Prefer custom error page over generic one
+		$viewFile = (view()->exists("errors/$code")) ? "errors/$code" : 'layouts/error';
+		$response = view($viewFile, [
 			'title' => (empty($message)) ? _('Error') : $message,
 			'code'  => $code
-		];
+		]);
 
-		return Response::view($view, $data, (isset($this->httpCodes[$code]) ? $code : 500));
+		// Attach HTTP code to response
+		return response($response, (isset($this->httpCodes[$code]) ? $code : 500));
 	}
 
 	/**

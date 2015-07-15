@@ -1,7 +1,5 @@
 <?php namespace App\Http\Controllers;
 
-use Auth;
-
 class HomeController extends Controller
 {
 	/**
@@ -12,7 +10,7 @@ class HomeController extends Controller
 	 */
 	public function showHomePage()
 	{
-		if(Auth::check())
+		if(auth()->check())
 			return redirect(route('category.index'));
 
 		$readme = markup(\File::get(base_path('readme.md')));
