@@ -8,7 +8,7 @@
 		"php": ">=5.5.9",
 		"baum/baum": "~1.1",
 		"felixkiss/uniquewith-validator": "2.*",
-		"gabrielbull/browser": "dev-master",
+		"gabrielbull/browser": "3.*",
 		"laravel/framework": "5.1.*",
 		"laravel/socialite": "~2.0",
 		"league/commonmark": "dev-master",

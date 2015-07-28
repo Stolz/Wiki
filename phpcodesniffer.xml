@@ -4,6 +4,7 @@
 
 	<description>Stolz's custom PSR-2 rules for Laravel</description>
 
+	<exclude-pattern>/bootstrap/cache/</exclude-pattern>
 	<exclude-pattern>/node_modules/</exclude-pattern>
 	<exclude-pattern>/public/</exclude-pattern>
 	<exclude-pattern>/resources/assets/bower/</exclude-pattern>
