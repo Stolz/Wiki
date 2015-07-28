@@ -12,6 +12,7 @@ grep -Ir --colour=auto \
 --exclude-dir="\.git"  \
 --exclude-dir="storage"  \
 --exclude-dir="vendor"  \
+--exclude-dir="node_modules"  \
 --exclude-from=.gitignore  \
 --exclude="`basename $0`"  \
 --exclude=.env.example  \

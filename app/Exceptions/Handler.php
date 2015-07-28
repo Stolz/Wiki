@@ -3,6 +3,7 @@
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Response;
 
 class Handler extends ExceptionHandler
 {
@@ -71,6 +72,7 @@ class Handler extends ExceptionHandler
 	 * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
 	 *
 	 * @param  \Exception  $e
+	 *
 	 * @return void
 	 */
 	public function report(Exception $e)
@@ -91,23 +93,36 @@ class Handler extends ExceptionHandler
 		if(config('app.debug') and app()->environment('local'))
 			return (class_exists('Whoops\\Run')) ? $this->whoops($e) : parent::render($request, $e);
 
-		// Get code
-		$code = ($e instanceof HttpException) ? $e->getStatusCode() : $e->getCode();
+		// HTTP exceptions are are normally intentionally thrown and its safe to show their message
+		if($this->isHttpException($e))
+		{
+			$code = $e->getStatusCode();
+			$message = $e->getMessage();
 
-		// Get message
-		$message = $e->getMessage();
-		if(empty($message) and isset($this->httpCodes[$code]))
+			if(empty($message))
+				$message = (isset($this->httpCodes[$code])) ? $this->httpCodes[$code] : $this->httpCodes[500];
+		}
+		// Other exceptions are usually unexpected errors and is best not to show their message but instead disguise them as error 500.
+		else
+		{
+			$code = $e->getCode();
+
+			if( ! isset($this->httpCodes[$code]))
+				$code = 500;
+
 			$message = $this->httpCodes[$code];
+		}
 
-		// Prefer custom error page over generic one
-		$viewFile = (view()->exists("errors/$code")) ? "errors/$code" : 'layouts/error';
-		$response = view($viewFile, [
-			'title' => (empty($message)) ? _('Error') : $message,
+		// If a custom view exist use it, otherwise use generic error page
+		$view = (view()->exists("errors/$code")) ? "errors/$code" : 'layouts/error';
+
+		// Data for the view
+		$data = [
+			'title' => $message,
 			'code'  => $code
-		]);
+		];
 
-		// Attach HTTP code to response
-		return response($response, (isset($this->httpCodes[$code]) ? $code : 500));
+		return Response::view($view, $data, $code);
 	}
 
 	/**
