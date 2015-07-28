@@ -5,7 +5,11 @@
 # - PHP_CodeSniffer https://github.com/squizlabs/PHP_CodeSniffer
 # - PHP version compatibility https://github.com/wimg/PHPCompatibility
 
-phpcs="./vendor/bin/phpcs . --standard=phpcodesniffer.xml,PHPCompatibility --report-width=100 --tab-width=4 --runtime-set testVersion 5.4 -s "
+phpcs="./vendor/bin/phpcs . \
+--standard=phpcodesniffer.xml,PHPCompatibility \
+--ignore=database/schema,node_modules,resources/assets/bower \
+--report-width=100 --tab-width=4 \
+--runtime-set testVersion 5.5.9 -s "
 
 source "$( cd "$( dirname "$0" )" && pwd )/common" || exit 1
 go_to_laravel_dir
