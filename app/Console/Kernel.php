@@ -11,6 +11,7 @@ class Kernel extends ConsoleKernel
 	 * @var array
 	 */
 	protected $commands = [
+		\App\Console\Commands\DatabaseBackupCommand::class,
 		\App\Console\Commands\GettextCommand::class,
 	];
 
