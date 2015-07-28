@@ -1,5 +1,7 @@
 @extends('layouts.error')
 
+<?php app('language')->apply() ?>
+
 @section('body')
 <div id="maintenance" class="row">
 	<div class="large-8 columns large-centered text-center">
