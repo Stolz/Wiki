@@ -1,13 +1,17 @@
 *.kate-swp
+*.orig
 *~
+.#*
 .*~
 .kateproject*
 /.env
+/.idea/
 /.inotify
 /composer.lock
 /database/backups/
 /database/schema/
 /node_modules/
+/npm-debug.log
 /public/*/debugbar.*
 /public/*/min/
 /resources/assets/bower/
