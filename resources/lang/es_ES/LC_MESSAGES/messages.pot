@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-03 12:45+0100\n"
+"POT-Creation-Date: 2015-07-29 16:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,10 +39,19 @@ msgstr ""
 msgid "Add page"
 msgstr ""
 
+msgid "After"
+msgstr ""
+
 msgid "Are you sure?"
 msgstr ""
 
 msgid "Avatar"
+msgstr ""
+
+msgid "Before"
+msgstr ""
+
+msgid "By"
 msgstr ""
 
 msgid "Cancel"
@@ -60,6 +69,9 @@ msgstr ""
 msgid "Code"
 msgstr ""
 
+msgid "Compare"
+msgstr ""
+
 msgid "Confirm"
 msgstr ""
 
@@ -73,6 +85,12 @@ msgid "Create page"
 msgstr ""
 
 msgid "Create subcategory"
+msgstr ""
+
+msgid "Created by"
+msgstr ""
+
+msgid "Date"
 msgstr ""
 
 msgid "Default"
@@ -107,6 +125,9 @@ msgid "If you think this may be an error please contact the site admin"
 msgstr ""
 
 msgid "Index"
+msgstr ""
+
+msgid "Inline"
 msgstr ""
 
 msgid "Is admin"
@@ -202,6 +223,10 @@ msgstr ""
 msgid "Please move those pages to another category first"
 msgstr ""
 
+#, php-format
+msgid "Please try again in %d seconds."
+msgstr ""
+
 msgid "Please visit us again in a few minutes"
 msgstr ""
 
@@ -223,6 +248,9 @@ msgstr ""
 msgid "Remote id"
 msgstr ""
 
+msgid "Restore"
+msgstr ""
+
 msgid "Return"
 msgstr ""
 
@@ -236,6 +264,9 @@ msgid "Root"
 msgstr ""
 
 msgid "Sections"
+msgstr ""
+
+msgid "Side by side"
 msgstr ""
 
 msgid "Site down for maintenance"
@@ -419,6 +450,12 @@ msgstr ""
 msgid "This password reset token is invalid."
 msgstr ""
 
+msgid "Title"
+msgstr ""
+
+msgid "Too many login attempts"
+msgstr ""
+
 #, php-format
 msgid "Unable to create %s"
 msgstr ""
@@ -446,7 +483,14 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
+#, php-format
+msgid "Version created by %s on %s (%s)"
+msgstr ""
+
 msgid "Versions"
+msgstr ""
+
+msgid "View page versions"
 msgstr ""
 
 msgid "We can't find a user with that e-mail address."
@@ -467,10 +511,17 @@ msgstr ""
 msgid "Your account has been disabled"
 msgstr ""
 
+msgid "Your account is not verified"
+msgstr ""
+
 msgid "Your password has been reset!"
 msgstr ""
 
 msgid "Your user is not authorized to access this section"
+msgstr ""
+
+#, php-format
+msgid "Your user is not authorized to perform action '%s' on resource '%s'"
 msgstr ""
 
 msgid "a mistyped address"

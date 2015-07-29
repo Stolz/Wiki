@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-03 12:45+0100\n"
+"POT-Creation-Date: 2015-07-29 16:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,11 +39,20 @@ msgstr "Acciones"
 msgid "Add page"
 msgstr "Añadir página"
 
+msgid "After"
+msgstr "Después"
+
 msgid "Are you sure?"
 msgstr "¿Estás seguro?"
 
 msgid "Avatar"
 msgstr "Avatar"
+
+msgid "Before"
+msgstr "Antes"
+
+msgid "By"
+msgstr "Por"
 
 msgid "Cancel"
 msgstr "Cancelar"
@@ -60,6 +69,9 @@ msgstr "Cambiar idioma"
 msgid "Code"
 msgstr "Código"
 
+msgid "Compare"
+msgstr "Comparar"
+
 msgid "Confirm"
 msgstr "Confirmar"
 
@@ -74,6 +86,12 @@ msgstr "Crear página"
 
 msgid "Create subcategory"
 msgstr "Crear subcategoría"
+
+msgid "Created by"
+msgstr "Creaado por"
+
+msgid "Date"
+msgstr "Fecha"
 
 msgid "Default"
 msgstr "Predeterminado"
@@ -108,6 +126,9 @@ msgstr "Si crees que se trata de un error por favor contacta con el administrado
 
 msgid "Index"
 msgstr "Listado"
+
+msgid "Inline"
+msgstr "En línea"
 
 msgid "Is admin"
 msgstr "Es administrador"
@@ -202,6 +223,10 @@ msgstr "Por favor identifícate para ver las secciones"
 msgid "Please move those pages to another category first"
 msgstr "Por favor primero mueve esas páginas a otra categoría"
 
+#, php-format
+msgid "Please try again in %d seconds."
+msgstr "Por favor inténtalo de nuevo en %d segundos."
+
 msgid "Please visit us again in a few minutes"
 msgstr "Por favor vuelve a intentar de nuevo un poco más tarde"
 
@@ -223,6 +248,9 @@ msgstr "ID remoto"
 msgid "Remote id"
 msgstr "ID remoto"
 
+msgid "Restore"
+msgstr "Restaurar"
+
 msgid "Return"
 msgstr "Volver"
 
@@ -237,6 +265,9 @@ msgstr "Raíz"
 
 msgid "Sections"
 msgstr "Secciones"
+
+msgid "Side by side"
+msgstr "Lado a lado"
 
 msgid "Site down for maintenance"
 msgstr "Web parada por mantenimiento"
@@ -419,6 +450,12 @@ msgstr "Esta categoría todavía no tiene subcategorías"
 msgid "This password reset token is invalid."
 msgstr "El token de restablecimiento de contraseña no es válido."
 
+msgid "Title"
+msgstr "Título"
+
+msgid "Too many login attempts"
+msgstr "Demasiados intentos de acceso"
+
 #, php-format
 msgid "Unable to create %s"
 msgstr "No se ha podido crear %s"
@@ -446,8 +483,15 @@ msgstr "Usuarios"
 msgid "Version"
 msgstr "Versión"
 
+#, php-format
+msgid "Version created by %s on %s (%s)"
+msgstr "Versión creada por % el %s (%s)"
+
 msgid "Versions"
 msgstr "Versiones"
+
+msgid "View page versions"
+msgstr "Ver versiones de la página"
 
 msgid "We can't find a user with that e-mail address."
 msgstr "No hemos podido encontrar ningún usuario con esa dirección de e-mail."
@@ -467,20 +511,21 @@ msgstr "Sí"
 msgid "Your account has been disabled"
 msgstr "Tu cuenta ha sido desactivada"
 
+msgid "Your account is not verified"
+msgstr "Tu cuenta no está verificada"
+
 msgid "Your password has been reset!"
 msgstr "Tu contraseña ha sido restablecida"
 
 msgid "Your user is not authorized to access this section"
 msgstr "Tu usuario no está autorizado a acceder a esta sección"
 
+#, php-format
+msgid "Your user is not authorized to perform action '%s' on resource '%s'"
+msgstr "Tu usuario no está autorizado a reallizar la acción '%s' en el recurso '%s'"
+
 msgid "a mistyped address"
 msgstr "una dirección mal escrita"
 
 msgid "an out-of-date link"
 msgstr "un enlace antiguo"
-
-#~ msgid "create"
-#~ msgstr "crear"
-
-#~ msgid "edit"
-#~ msgstr "editar"
