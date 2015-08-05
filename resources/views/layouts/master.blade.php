@@ -28,7 +28,7 @@
 			<div id="main" class="row" style="min-height:100vh">
 				<br/>
 				{{-- FLASH MESSAGES --}}
-				@foreach (['error' => 'alert', 'success' => 'success', 'info' => '', 'secondary' => 'secondary'] as $flashMessage => $boxClass)
+				@foreach (['error' => 'alert', 'warning' => 'warning', 'success' => 'success', 'info' => '', 'secondary' => 'secondary'] as $flashMessage => $boxClass)
 					@if (Session::has($flashMessage))
 					<div class="alert-box {{ $boxClass }}" data-alert>
 						{{ Session::get($flashMessage) }}
