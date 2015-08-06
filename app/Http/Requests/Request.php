@@ -23,7 +23,7 @@ abstract class Request extends FormRequest
 	 * @param  array
 	 * @return void
 	 */
-	public function __construct($rules = [])
+	public function __construct(array $rules = [])
 	{
 		if($rules)
 			list($this->labels, $this->rules) = self::parseRulesAndLabels($rules);
@@ -58,6 +58,16 @@ abstract class Request extends FormRequest
 	public function labels()
 	{
 		return (object) $this->labels;
+	}
+
+	/**
+	 * Set custom attributes for validator errors.
+	 *
+	 * @return array
+	 */
+	public function attributes()
+	{
+		return $this->labels;
 	}
 
 	/**
@@ -154,19 +164,5 @@ abstract class Request extends FormRequest
 		}
 
 		return array_values($parsed);
-	}
-
-	/**
-	 * Handle a failed validation attempt.
-	 *
-	 * @param  \Illuminate\Contracts\Validation\Validator  $validator.
-	 * @return mixed
-	 */
-	protected function failedValidation(Validator $validator)
-	{
-		// Set custom error attibute names
-		$validator->setAttributeNames($this->labels); //TODO not working. According to dd($validator) the instance has the right attibute names but they are not used!
-
-		return parent::failedValidation($validator);
 	}
 }

@@ -1,7 +1,5 @@
 <?php namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
-
 class CreateUserRequest extends Request
 {
 	/**
@@ -10,7 +8,7 @@ class CreateUserRequest extends Request
 	 * @param  array
 	 * @return void
 	 */
-	public function __construct($rules = [])
+	public function __construct(array $rules = [])
 	{
 		parent::__construct([
 			'uuid' => [_('Remote id'), 'required|max:255|unique_with:users,provider_id{excludeCurrentId}'],
