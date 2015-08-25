@@ -57,7 +57,7 @@ class AuthController extends Controller
 			return $this->goBack(_('Unavailable provider'));
 
 		// Set provider callback url
-		\Config::set("services.{$provider->slug}.redirect", \URL::current());
+		config(["services.{$provider->slug}.redirect" => \URL::current()]);
 
 		// Create an Oauth service for this provider
 		$oauthService = \Socialite::with($provider->slug);
