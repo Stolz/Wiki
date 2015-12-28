@@ -10,7 +10,7 @@ class CreateLanguageRequest extends Request
 	 * @param  array
 	 * @return void
 	 */
-	public function __construct($rules = [])
+	public function __construct(array $rules = [])
 	{
 		parent::__construct([
 			'code' => [_('Code'), 'required|size:2|regex:/^[a-z]+$/|unique:languages,code{excludeCurrentId}'],

@@ -10,7 +10,7 @@ class CreateProviderRequest extends Request
 	 * @param  array
 	 * @return void
 	 */
-	public function __construct($rules = [])
+	public function __construct(array $rules = [])
 	{
 		parent::__construct([
 			'name' => [_('Name'), 'required|max:255|unique:providers,name{excludeCurrentId}'],
