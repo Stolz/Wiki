@@ -59,6 +59,7 @@ return [
 	'regex'                => _('The :attribute format is invalid.'),
 	'required'             => _('The :attribute field is required.'),
 	'required_if'          => _('The :attribute field is required when :other is :value.'),
+	'required_unless'      => _('The :attribute field is required unless :other is in :values.'),
 	'required_with'        => _('The :attribute field is required when :values is present.'),
 	'required_with_all'    => _('The :attribute field is required when :values is present.'),
 	'required_without'     => _('The :attribute field is required when :values is not present.'),
@@ -70,6 +71,7 @@ return [
 		'string'  => _('The :attribute must be :size characters.'),
 		'array'   => _('The :attribute must contain :size items.'),
 	],
+	'string'               => _('The :attribute must be a string.'),
 	'timezone'             => _('The :attribute must be a valid zone.'),
 	'unique'               => _('The :attribute has already been taken.'),
 	'url'                  => _('The :attribute format is invalid.'),
@@ -80,7 +82,7 @@ return [
 	|--------------------------------------------------------------------------
 	|
 	| Here you may specify custom validation messages for attributes using the
-	| convention 'attribute.rule' to name the lines. This makes it quick to
+	| convention "attribute.rule" to name the lines. This makes it quick to
 	| specify a specific custom language line for a given attribute rule.
 	|
 	*/
@@ -98,7 +100,7 @@ return [
 	|
 	| The following language lines are used to swap attribute place-holders
 	| with something more reader friendly such as E-Mail Address instead
-	| of 'email'. This simply helps us make messages a little cleaner.
+	| of "email". This simply helps us make messages a little cleaner.
 	|
 	*/
 

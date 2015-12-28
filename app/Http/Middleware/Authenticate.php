@@ -15,7 +15,7 @@ class Authenticate
 	protected $auth;
 
 	/**
-	 * Create a new filter instance.
+	 * Create a new middleware instance.
 	 *
 	 * @param  Guard  $auth
 	 * @return void
@@ -37,13 +37,9 @@ class Authenticate
 		if ($this->auth->guest())
 		{
 			if ($request->ajax())
-			{
 				return response('Unauthorized.', 401);
-			}
-			else
-			{
-				return redirect()->guest('login');
-			}
+
+			return redirect()->guest('login');
 		}
 
 		return $next($request);
