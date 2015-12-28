@@ -1,4 +1,6 @@
-<?php namespace App\Http\Requests;
+<?php
+
+namespace App\Http\Requests;
 
 use Laravel\Socialite\Contracts\User as SocialUser;
 use Validator;

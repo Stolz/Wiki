@@ -1,6 +1,6 @@
-<?php namespace App\Http\Requests;
+<?php
 
-use App\Http\Requests\Request;
+namespace App\Http\Requests;
 
 class CreatePageRequest extends Request
 {

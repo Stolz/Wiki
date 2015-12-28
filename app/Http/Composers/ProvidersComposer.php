@@ -1,4 +1,6 @@
-<?php namespace App\Http\Composers;
+<?php
+
+namespace App\Http\Composers;
 
 use App\Provider;
 use Illuminate\Contracts\View\View;
