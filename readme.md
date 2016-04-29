@@ -24,10 +24,9 @@ Via git
 
 Via composer
 
-	composer create-project stolz/wiki --prefer-dist --stability=dev && cd wiki
+	composer create-project stolz/wiki --prefer-dist --stability=dev --no-scripts && cd wiki
 
-
-Once the project is installed configure it as any other Laravel app
+Once the project is installed configure it as [any other Laravel app](https://laravel.com/docs/5.1/installation#configuration)
 
 	$EDITOR .env
 	$EDITOR config/app.php
